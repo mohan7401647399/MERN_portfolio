@@ -28,19 +28,19 @@ export const Contact = () => {
                   <form action="" onSubmit={handleSubmit}>
                     <Row id="userForm">
                       <Col size={12} sm={6} className="px-1">
-                        <input id="first_name" type="text" required value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                        <input id="firstName" type="text" name="firstName" required value={formDetails.firstName} placeholder="First Name" onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input id="last_name" type="text" required value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} />
+                        <input id="last_name" type="text" name="lastName" required value={formDetails.lastName} placeholder="Last Name" onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input id="email_address" type="email" required value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
+                        <input id="email_address" type="email" name="email" required value={formDetails.email} placeholder="Email Address" onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input id="phone_no" type="tel" required value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)} />
+                        <input id="phone_no" type="tel" name="phone" required value={formDetails.phone} placeholder="Phone No." onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} className="px-1">
-                        <textarea id="message" rows="6" required value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                        <textarea id="message" rows="6" name="message" required value={formDetails.message} placeholder="Message" onChange={onFormUpdate}></textarea>
                         <button type="submit" onClick={formDetails.firstName === "" || formDetails.lastName === "" || formDetails.email === "" || formDetails.phone === "" || formDetails.message === "" ? "" : notify}>
                           <span>{buttonText}</span>
                           <ToastContainer />

@@ -107,8 +107,9 @@ export default function UserContextProvider({ children }) {
 
     const notify = () => toast("Contact form successfully saved!");
 
-    const onFormUpdate = (category, value) => {
-        setFormDetails({ ...formDetails, [category]: value })
+    const onFormUpdate = (e) => {
+        const { name, value } = e.target;
+        setFormDetails({ ...formDetails, [name]: value })
     }
 
     const handleSubmit = async (e) => {

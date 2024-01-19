@@ -56,7 +56,7 @@ export default function UserContextProvider({ children }) {
         }, delta);
 
         return () => { clearInterval(ticker) };
-    }, [text])
+    }, [text,delta])
 
     const tick = () => {
         let i = loopNum % toRotate.length;

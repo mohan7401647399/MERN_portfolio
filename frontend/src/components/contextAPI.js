@@ -75,12 +75,12 @@ export default function UserContextProvider({ children }) {
         }
     }
 
-    useEffect(() => {
+     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
         }, delta);
-
         return () => { clearInterval(ticker) };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text])
 
     //        useEffect(() => {

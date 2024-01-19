@@ -50,13 +50,13 @@ export default function UserContextProvider({ children }) {
     const toRotate = ["MERN stack Developer", "Web Designer", "UI/UX Designer"];
     const period = 2000;
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta);
+    // useEffect(() => {
+    //     let ticker = setInterval(() => {
+    //         tick();
+    //     }, delta);
 
-        return () => { clearInterval(ticker) };
-    }, [text,delta])
+    //     return () => { clearInterval(ticker) };
+    // }, [text,delta])
 
     const tick = () => {
         let i = loopNum % toRotate.length;
@@ -82,6 +82,14 @@ export default function UserContextProvider({ children }) {
             setIndex(prevIndex => prevIndex + 1);
         }
     }
+
+        useEffect(() => {
+        let ticker = setInterval(() => {
+            tick();
+        }, delta);
+        return () => { clearInterval(ticker) };
+        // }, [text])
+    }, [tick,delta])
 
     //Skills page functions
     const responsive = {

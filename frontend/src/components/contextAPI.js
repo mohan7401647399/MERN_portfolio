@@ -113,7 +113,7 @@ export default function UserContextProvider({ children }) {
         }, delta);
         return () => { clearInterval(ticker) };
         // }, [text])
-    }, [text])
+    }, [text, delta, isDeleting, loopNum, toRotate])
 
     
     //Skills page functions

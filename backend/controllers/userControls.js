@@ -3,6 +3,7 @@
 //   nodemailer = require("nodemailer");
 
 // userRouter.post("/contact", (req, res) => {
+userRouter.post("/contact", (req, res) => {
 
 //   try {
 //     const { firstName, lastName, email, message, phone, } = req.body;

@@ -3,7 +3,7 @@
 //   nodemailer = require("nodemailer");
 
 // userRouter.post("/contact", (req, res) => {
-userRouter.post("/contact", (req, res) => {
+
 
 //   try {
 //     const { firstName, lastName, email, message, phone, } = req.body;
@@ -53,8 +53,9 @@ const userRouter = require("express").Router(),
   User = require("../Models/Auth.model"),
   nodemailer = require("nodemailer");
 
-userRouter.post("/contact",async (req, res) => {
-
+// userRouter.post("/contact",async (req, res) => {
+userRouter.post("/contact", (req, res) => {
+  
   try {
     const { firstName, lastName, email, message, phone } = req.body;
     // await User.create({firstName, lastName, email, message, phone})

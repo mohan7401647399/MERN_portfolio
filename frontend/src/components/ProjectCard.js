@@ -1,13 +1,18 @@
 import { Col } from "react-bootstrap";
+import { BsLink } from "react-icons/bs";
+import Button from 'react-bootstrap/Button';
 
 export const ProjectCard = ({ title, link, imgUrl }) => {
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
-        <img src={imgUrl} alt="img"/>
+        <img src={imgUrl} alt="img" />
         <div className="proj-txtx">
           <h4>{title}</h4>
-          <p> <a className="text-white" href={link}>Click here</a></p>
+            <Button variant="outline-success">
+              <a className="text-white text-decoration-none" href={link}>Click here <BsLink />
+              </a>
+            </Button>
         </div>
       </div>
     </Col>

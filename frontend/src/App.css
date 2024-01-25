@@ -478,6 +478,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx {
   position: relative;
+  padding: 5px;
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;

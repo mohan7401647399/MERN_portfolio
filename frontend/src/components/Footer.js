@@ -18,9 +18,9 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={12} md={8} lg={6} xs={12} xl={4} xxl={4} className="text-center text-sm-end mt-3">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/mohan-r-86164b24b/"><img src={navIcon1} alt="Icon" /></a>
-              <a href="https://www.facebook.com/mohan.viper/"><img src={navIcon2} alt="Icon" /></a>
-              <a href="https://www.instagram.com/messiah.freakin"><img src={navIcon3} alt="Icon" /></a>
+              <a href="https://www.linkedin.com/in/mohan-r-86164b24b/"><img src={navIcon1} alt="linkedin" /></a>
+              <a href="https://github.com/mohan7401647399"><img src={navIcon2} alt="Github" /></a>
+              <a href="https://www.instagram.com/messiah.freakin"><img src={navIcon3} alt="Insta" /></a>
             </div>
             <p>Phone/Whatsapp: 7401647399 / 8667764437</p>
             <p>Official Mail id: mtm.kcs@gmail.com</p>

@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container,Button } from "react-bootstrap";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -32,7 +32,7 @@ export const NavBar = () => {
               <a href="https://www.instagram.com/messiah.freakin"><img src={navIcon3} alt="instagram" /></a>
             </div>
             <HashLink to='#connect'>
-              <button><span className="vvd111">Let’s Connect with us</span></button>
+                <Button className="border-2"><span className="vvd111">Let’s Connect with us</span></Button>
             </HashLink>
           </span>
         </Navbar.Collapse>

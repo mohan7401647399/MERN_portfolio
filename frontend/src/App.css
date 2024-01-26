@@ -96,7 +96,7 @@ nav.navbar {
 }
 
 nav.navbar.scrolled {
-  padding: 5px 0;
+  padding: 1px;
   background-color: #121212;
 }
 
@@ -157,11 +157,15 @@ span.navbar-text {
 }
 
 .vvd111 {
-  color: crimson;
+  color:rgba(150, 100, 255, 1);
+}
+
+.vvd111:hover{
+  color: black;
 }
 
 .social-icon a img {
-  width: 40%;
+  width: 50%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
@@ -174,9 +178,9 @@ span.navbar-text {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
-  font-size: 18px;
-  margin-left: 18px;
+/*   padding: 18px 34px; */
+/*   font-size: 18px; */
+  margin-left: 5px;
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;

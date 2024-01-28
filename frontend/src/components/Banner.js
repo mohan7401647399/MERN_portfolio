@@ -6,7 +6,6 @@ import TrackVisibility from 'react-on-screen';
 import { useUserContext } from './contextAPI';
 import resume from '../assets/img/Resume.pdf'
 import { BsArrowDownSquareFill } from "react-icons/bs";
-import Button from 'react-bootstrap/Button';
 
 export const Banner = () => {
 

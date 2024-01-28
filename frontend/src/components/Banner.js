@@ -34,7 +34,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <div className="bannerbox">
+                  <div className="bannerbox m-auto">
                     <div className="bannerimg">
                       <img className="m-auto p-auto" src={headerImg} alt="Header Img" />
                         <h2>MERN stack developer</h2>

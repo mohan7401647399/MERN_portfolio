@@ -1,5 +1,5 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard, MernProjectsCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -7,7 +7,7 @@ import { useUserContext } from './contextAPI';
 
 export const Projects = () => {
 
-  const { projects } = useUserContext();
+  const { projects, MERNprojects } = useUserContext();
 
   return (
     <section className="project" id="project">
@@ -31,9 +31,8 @@ export const Projects = () => {
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p> <a href="https://github.com/mohan7401647399/MERN">MERN projects is here</a> </p>
-                        <p> <a href="https://github.com/mohan7401647399">GITHUB link is here</a> </p>
-                        <p> <a href="https://github.com/mohan7401647399/HTML-CSS-JS">HTML & CSS & JS projects is here</a> </p>
+                        <Row> {MERNprojects.map((project, index) => { return (<MernProjectsCard key={index} {...project} />) })}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third" className="h-50 w-50 m-auto">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvQpJaWdeDLLL_aWpfTZ5N5GcMKMUuhK9XA&usqp=CAU" alt="dice" />

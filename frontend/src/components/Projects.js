@@ -35,8 +35,9 @@ export const Projects = () => {
                         <p> <a href="https://github.com/mohan7401647399">GITHUB link is here</a> </p>
                         <p> <a href="https://github.com/mohan7401647399/HTML-CSS-JS">HTML & CSS & JS projects is here</a> </p>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <p><a href="https://papaya-kulfi-ae2a2c.netlify.app/">Dice game</a></p>
+                      <Tab.Pane eventKey="third" className="h-50 w-50 m-auto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvQpJaWdeDLLL_aWpfTZ5N5GcMKMUuhK9XA&usqp=CAU" alt="dice" />
+                        <p><a href="https://papaya-kulfi-ae2a2c.netlify.app/" className=" text-decoration-none">Dice game</a></p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>

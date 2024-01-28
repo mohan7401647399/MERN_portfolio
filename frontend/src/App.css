@@ -350,6 +350,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   overflow: hidden;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .bannerimg img {
@@ -365,6 +369,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   pointer-events: none;
+  z-index: 3;
+}
+
+
+.bannerbox:hover .bannerimg img {
+  opacity: 0;
+}
+
+.bannerimg h2{
+  position: relative;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .banner .tagline {

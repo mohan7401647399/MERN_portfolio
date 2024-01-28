@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 export const ProjectCard = ({ title, link, imgUrl }) => {
   return (
-    <Col size={12} sm={6} md={4}>
+    <Col size={12} xs={10} sm={6} md={4} className="m-auto">
       <div className="proj-imgbx">
         <img src={imgUrl} alt="img" />
         <div className="proj-txtx">
@@ -20,9 +20,10 @@ export const ProjectCard = ({ title, link, imgUrl }) => {
 }
 
 
+
 export const MernProjectsCard = ({ title, link, imgUrl }) => {
   return (
-    <Col size={12} sm={6} md={4}>
+    <Col size={12} xs={10} sm={6} md={4}>
       <div className="proj-imgbx">
         <img src={imgUrl} alt="img" />
         <div className="proj-txtx">

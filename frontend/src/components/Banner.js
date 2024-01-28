@@ -38,10 +38,6 @@ export const Banner = () => {
                     <div className="bannerimg">
                       <img className="m-auto p-auto" src={headerImg} alt="Header Img" />
                         <h2>MERN stack developer</h2>
-                        <Button variant="outline-primary">
-                            Hire me
-//                         <a href="#" className="text-white text-decoration-none">Hire Me</a>
-                        </Button>
                     </div>
                   </div>
                 </div>}

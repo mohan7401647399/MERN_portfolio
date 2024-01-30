@@ -488,7 +488,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-.skill-bx li{
+.skill-bx p li{
   padding: 5px;
   margin: 5px;
   border-bottom: 1px solid gray;

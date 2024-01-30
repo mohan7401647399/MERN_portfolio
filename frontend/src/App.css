@@ -384,10 +384,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   font-size: 1.5em;
   text-align: center;
-  color: #fff;
+  color: orangered;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .banner .tagline {

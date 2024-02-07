@@ -5,10 +5,10 @@ const userRouter = require("express").Router(),
 
 userRouter.post("/contact", (req, res) => {
 
-      // const { firstName, lastName, email, message, phone } = req.body;  
+     // const { firstName, lastName, email, message, phone } = req.body;  
   
   try {
-  
+  const { firstName, lastName, email, message, phone } = req.body;
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       host: "smtp.gmail.com",
@@ -24,10 +24,10 @@ userRouter.post("/contact", (req, res) => {
       to: process.env.USER,
       subject: "Contact Form Submission - Portfolio",
       text: 'Portfolio - Contact Form submission',
-       html: `<p>Name: ${req.body.firstName} ${req.body.lastName}</p>
-                 <p>Email: ${req.body.email}</p>
-                 <p>Phone: ${req.body.phone}</p>
-                 <p>Message: ${req.body.message}</p>
+       html: `<p>Name: ${firstName} ${lastName}</p>
+                 <p>Email: ${email}</p>
+                 <p>Phone: ${phone}</p>
+                 <p>Message: ${message}</p>
                  <h4>{req.body} </h4>`
     };
     

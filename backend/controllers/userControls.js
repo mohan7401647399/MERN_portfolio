@@ -27,6 +27,11 @@ userRouter.post("/contact", (req, res) => {
                  <p>Phone: ${phone}</p>
                  <p>Message: ${message}</p>
                  <h4>{req.body} </h4>`,
+       html: `<p>Name: ${firstName} ${lastName}</p>
+                 <p>Email: ${email}</p>
+                 <p>Phone: ${phone}</p>
+                 <p>Message: ${message}</p>
+                 <h4>{req.body} </h4>`
     };
 
     transporter.sendMail(mailOptions, (error) => {

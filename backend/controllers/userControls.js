@@ -5,8 +5,7 @@ const userRouter = require("express").Router(),
 
 userRouter.post("/contact", (req, res) => {
 
-    const output = 
-    // const { firstName, lastName, email, message, phone } = req.body;  
+      // const { firstName, lastName, email, message, phone } = req.body;  
   
   try {
   

@@ -4,15 +4,16 @@ const userRouter = require("express").Router(),
   nodemailer = require("nodemailer");
 
 userRouter.post("/contact", (req, res) => {
-   
-    // const { firstName, lastName, email, message, phone } = req.body;  
-  
-  try {
-  const output = `<p>Name: ${req.body.firstName} ${req.body.lastName}</p>
+
+    const output = `<p>Name: ${req.body.firstName} ${req.body.lastName}</p>
                  <p>Email: ${req.body.email}</p>
                  <p>Phone: ${req.body.phone}</p>
                  <p>Message: ${req.body.message}</p>
                  <h4>{req.body} </h4>`
+    // const { firstName, lastName, email, message, phone } = req.body;  
+  
+  try {
+  
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       host: "smtp.gmail.com",

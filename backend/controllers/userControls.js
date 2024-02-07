@@ -27,11 +27,7 @@ userRouter.post("/contact", (req, res) => {
       from: firstName,
       to: process.env.USER,
       subject: "Contact Form Submission - Portfolio",
-      text: `<p>Name: ${firstName} ${lastName}</p>
-                 <p>Email: ${email}</p>
-                 <p>Phone: ${phone}</p>
-                 <p>Message: ${message}</p>
-                 <h4>{req.body} </h4>`hi,
+      text: hi,
        html: output
     };
     

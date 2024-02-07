@@ -4,7 +4,12 @@ const userRouter = require("express").Router(),
   nodemailer = require("nodemailer");
 
 userRouter.post("/contact", (req, res) => {
-    const { firstName, lastName, email, message, phone } = req.body;  
+   const output = `<p>Name: ${req.body.firstName} ${req.body.lastName}</p>
+                 <p>Email: ${req.body.email}</p>
+                 <p>Phone: ${req.body.phone}</p>
+                 <p>Message: ${req.body.message}</p>
+                 <h4>{req.body} </h4>`
+    // const { firstName, lastName, email, message, phone } = req.body;  
   
   try {
 
@@ -27,11 +32,7 @@ userRouter.post("/contact", (req, res) => {
                  <p>Phone: ${phone}</p>
                  <p>Message: ${message}</p>
                  <h4>{req.body} </h4>`,
-       html:  `<p>Name: ${firstName} ${lastName}</p>
-                 <p>Email: ${email}</p>
-                 <p>Phone: ${phone}</p>
-                 <p>Message: ${message}</p>
-                 <h4>{req.body} </h4>`
+       html: output
     };
     
     transporter.sendMail(mailOptions, (error) => {

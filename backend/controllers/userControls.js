@@ -5,11 +5,7 @@ const userRouter = require("express").Router(),
 
 userRouter.post("/contact", (req, res) => {
 
-    const output = `<p>Name: ${req.body.firstName} ${req.body.lastName}</p>
-                 <p>Email: ${req.body.email}</p>
-                 <p>Phone: ${req.body.phone}</p>
-                 <p>Message: ${req.body.message}</p>
-                 <h4>{req.body} </h4>`
+    const output = 
     // const { firstName, lastName, email, message, phone } = req.body;  
   
   try {
@@ -28,8 +24,12 @@ userRouter.post("/contact", (req, res) => {
       from: firstName,
       to: process.env.USER,
       subject: "Contact Form Submission - Portfolio",
-      text: hi,
-       html: output
+      text: Portfolio - Contact Form submission,
+       html: `<p>Name: ${req.body.firstName} ${req.body.lastName}</p>
+                 <p>Email: ${req.body.email}</p>
+                 <p>Phone: ${req.body.phone}</p>
+                 <p>Message: ${req.body.message}</p>
+                 <h4>{req.body} </h4>`
     };
     
     transporter.sendMail(mailOptions, (error) => {

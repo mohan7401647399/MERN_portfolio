@@ -5,10 +5,10 @@ const userRouter = require("express").Router(),
 
 userRouter.post("/contact", (req, res) => {
 
-      const { firstName, lastName, email, message, phone } = req.body;  
+    //  const { firstName, lastName, email, message, phone } = req.body;  
   
   try {
- // const { firstName, lastName, email, message, phone } = req.body;
+  const { firstName, lastName, email, message, phone } = req.body;
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       host: "smtp.gmail.com",

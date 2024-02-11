@@ -129,9 +129,9 @@ export default function UserContextProvider({ children }) {
             .then(res => {
                 console.log(res.data.code);
                 if (res.data.code === 200) {
-                    setStatus({ succes: true, message: 'Message sent successfully' });
+                    setStatus({ success: true, message: 'Message sent successfully' });
                 } else {
-                    setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
+                    setStatus({ success: false, message: 'Something went wrong, please try again later.' });
                 }
             }).catch(err => console.log(err))
         setButtonText("Sent");

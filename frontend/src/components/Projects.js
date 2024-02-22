@@ -26,12 +26,12 @@ export const Projects = () => {
                       <Nav.Item> <Nav.Link eventKey="third">Games</Nav.Link> </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                      <Tab.Pane eventKey="first">
-                        <Row> {projects.map((project, index) => { return (<ProjectCard key={index} {...project} />) })}
+                       <Tab.Pane eventKey="first">
+                        <Row> {MERNprojects.map((project, index) => { return (<MernProjectsCard key={index} {...project} />) })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <Row> {MERNprojects.map((project, index) => { return (<MernProjectsCard key={index} {...project} />) })}
+                        <Row> {projects.map((project, index) => { return (<ProjectCard key={index} {...project} />) })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third" className="h-50 w-50 m-auto">

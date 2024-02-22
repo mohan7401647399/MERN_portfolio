@@ -3,6 +3,8 @@ import projImg1 from "../assets/img/ecommerce.png";
 import projImg2 from "../assets/img/youtube.png";
 import projImg3 from "../assets/img/spotify.png";
 import projImg4 from "../assets/img/instagram.png";
+import InventoryApp from "../assets/img/Inventory_app.png";
+import Netflix from "../assets/img/Netflix.png";
 import MernImg1 from "../assets/img/Login_signup.png";
 import MernImg2 from "../assets/img/money_tracker.png";
 import axios from 'axios';
@@ -102,8 +104,10 @@ export default function UserContextProvider({ children }) {
         { title: "Instagram", link: "https://instagram-clone-fc9fd.web.app/", imgUrl: projImg4 }
     ];
 
-        //MERN page functions
+     //MERN page functions
     const MERNprojects = [
+        { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", imgUrl: InventoryApp },
+        { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", imgUrl: Netflix },
         { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
         { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 },
     ];

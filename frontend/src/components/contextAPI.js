@@ -3,7 +3,7 @@ import projImg1 from "../assets/img/ecommerce.png";
 import projImg2 from "../assets/img/youtube.png";
 import projImg3 from "../assets/img/spotify.png";
 import projImg4 from "../assets/img/instagram.png";
-import projImg5 from "../assets/img/task_app.png";
+import MernImg3 from "../assets/img/task_app.png";
 import InventoryApp from "../assets/img/Inventory_app.png";
 import Netflix from "../assets/img/Netflix.png";
 import MernImg1 from "../assets/img/Login_signup.png";
@@ -102,8 +102,7 @@ export default function UserContextProvider({ children }) {
         { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", imgUrl: projImg1 },
         { title: "Youtube", link: "https://clone-90a52.web.app/", imgUrl: projImg2 },
         { title: "Spotify", link: "https://spotify-clone-7276b.web.app/", imgUrl: projImg3 },
-        { title: "Instagram", link: "https://instagram-clone-fc9fd.web.app/", imgUrl: projImg4 },
-        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", imgUrl: projImg5 }
+        { title: "Instagram", link: "https://instagram-clone-fc9fd.web.app/", imgUrl: projImg4 }
     ];
 
      //MERN page functions
@@ -112,6 +111,7 @@ export default function UserContextProvider({ children }) {
         { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", imgUrl: Netflix },
         { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
         { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 },
+        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", imgUrl: MernImg3 }
     ];
 
     //contact page functions

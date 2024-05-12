@@ -1,4 +1,4 @@
-    import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import projImg1 from "../assets/img/ecommerce.png";
 import projImg2 from "../assets/img/youtube.png";
 import projImg3 from "../assets/img/spotify.png";

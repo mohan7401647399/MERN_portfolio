@@ -20,7 +20,7 @@ export const Skills = () => {
                         <p> <li>Front-End Development: Proficient in HTML, CSS, and JavaScript, I create stunning and responsive user interfaces that leave a lasting impression.</li>
                         <li>Back-End Development: Adept at server-side programming with Node.js and Python, handling complex business logic and data management efficiently.</li>
                         <li>Database Management: Skilled in working with SQL and NoSQL databases like MySQL, PostgreSQL, MongoDB, and Firebase, ensuring data integrity and seamless performance.</li></p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider w-100">
                             <div className="item">
                                 <img src={meter1} alt="MERN" />
                                 <h5>MERN</h5>
@@ -42,7 +42,7 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="bg" />
     </section>
   )
 }

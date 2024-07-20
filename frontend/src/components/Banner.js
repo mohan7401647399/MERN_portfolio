@@ -30,7 +30,7 @@ export const Banner = () => {
                 </div>}
             </TrackVisibility>
           </Col>
-          <Col xs={12} md={6} xl={5} className="mt-4">
+          <Col xs={12} md={6} xl={5} className="mt-4 align-items-center">
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>

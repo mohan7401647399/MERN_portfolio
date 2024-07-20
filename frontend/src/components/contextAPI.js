@@ -55,7 +55,7 @@ export default function UserContextProvider({ children }) {
     const toRotate = ["MERN stack Developer", "Web Designer", "UI/UX Designer"];
     const period = 2000;
 
-       const tick = () => {
+    const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -80,15 +80,15 @@ export default function UserContextProvider({ children }) {
         }
     }
 
-     useEffect(() => {
+    useEffect(() => {
         let ticker = setInterval(() => {
             tick();
         }, delta);
         return () => { clearInterval(ticker) };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text])
 
-    
+
     //Skills page functions
     const responsive = {
         superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
@@ -96,7 +96,7 @@ export default function UserContextProvider({ children }) {
         tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
         mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
     };
-    
+
     //project page functions
     const projects = [
         { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", imgUrl: projImg1 },
@@ -105,7 +105,7 @@ export default function UserContextProvider({ children }) {
         { title: "Instagram", link: "https://instagram-clone-fc9fd.web.app/", imgUrl: projImg4 }
     ];
 
-     //MERN page functions
+    //MERN page functions
     const MERNprojects = [
         { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", imgUrl: InventoryApp },
         { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", imgUrl: Netflix },
@@ -127,13 +127,12 @@ export default function UserContextProvider({ children }) {
         setFormDetails({ ...formDetails, [name]: value })
     }
 
+    axios.defaults.withCredentials = true;
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtonText("Sending...");
-        axios.defaults.withCredentials = true;
         await axios.post('https://portfolio-backend-ysb8.onrender.com/contact', { formDetails })
             .then(res => {
-                console.log(res.data.code);
                 if (res.data.code === 200) {
                     setStatus({ success: true, message: 'Message sent successfully' });
                 } else {
@@ -144,7 +143,7 @@ export default function UserContextProvider({ children }) {
         setFormDetails(formInitialDetails);
         setTimeout(() => {
             setStatus({})
-        }, 5000)
+        }, 2000)
     }
 
     return (
@@ -153,4 +152,3 @@ export default function UserContextProvider({ children }) {
         </userContext.Provider>
     );
 };
-

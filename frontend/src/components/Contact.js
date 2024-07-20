@@ -6,9 +6,7 @@ import { useUserContext } from './contextAPI';
 import { ToastContainer } from 'react-toastify';
 
 export const Contact = () => {
-
   const { handleSubmit, formDetails, notify, buttonText, status, onFormUpdate } = useUserContext();
-
   return (
     <section className="contact" id="connect">
       <Container>
@@ -28,19 +26,19 @@ export const Contact = () => {
                   <form action="" onSubmit={handleSubmit}>
                     <Row id="userForm">
                       <Col size={12} sm={6} className="px-1">
-                        <input id="firstName" type="text" name="firstName" required value={formDetails.firstName} placeholder="First Name" onChange={onFormUpdate} />
+                        <input type="text" name="firstName" required value={formDetails.firstName} placeholder="First Name" onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input id="last_name" type="text" name="lastName" required value={formDetails.lastName} placeholder="Last Name" onChange={onFormUpdate} />
+                        <input type="text" name="lastName" required value={formDetails.lastName} placeholder="Last Name" onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input id="email_address" type="email" name="email" required value={formDetails.email} placeholder="Email Address" onChange={onFormUpdate} />
+                        <input type="email" name="email" required value={formDetails.email} placeholder="Email Address" onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
-                        <input id="phone_no" type="tel" name="phone" required value={formDetails.phone} placeholder="Phone No." onChange={onFormUpdate} />
+                        <input type="tel" name="phone" required value={formDetails.phone} placeholder="Phone No." onChange={onFormUpdate} />
                       </Col>
                       <Col size={12} className="px-1">
-                        <textarea id="message" rows="6" name="message" required value={formDetails.message} placeholder="Message" onChange={onFormUpdate}></textarea>
+                        <textarea rows="6" name="message" required value={formDetails.message} placeholder="Message" onChange={onFormUpdate}></textarea>
                         <button type="submit" onClick={formDetails.firstName === "" || formDetails.lastName === "" || formDetails.email === "" || formDetails.phone === "" || formDetails.message === "" ? "" : notify}>
                           <span>{buttonText}</span>
                           <ToastContainer />

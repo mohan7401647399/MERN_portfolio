@@ -129,6 +129,8 @@ span.navbar-text {
 }
 
 .social-icon {
+  margin: auto;
+  width: 50%;
   display: inline-block;
   /* margin-left: 14px; */
 }
@@ -268,6 +270,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
+
 
 /************ Banner Css ************/
 .banner {

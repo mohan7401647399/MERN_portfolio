@@ -15,43 +15,30 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="align-items-center">
+        <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-<<<<<<< HEAD
                   <span className="m-3 p-2" style={{ "fontSize": "35px" }}><a className="text-warning" href={resume} download="resume"><BsArrowDownSquareFill />
-=======
-                  <span className="m-3 p-2" style={{"fontSize":"35px"}}><a className="text-warning" href={resume} download="resume"><BsArrowDownSquareFill />
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
                   </a></span>
                   <h1>{`Hi! I'm Mohan`} <span className="txt-rotate"><span className="wrap">{text}</span></span></h1>
                   <p>👋 Hello! I'm <span className="text-warning">Mohan R</span>, a passionate and detail-oriented Web Application Developer with a track record of creating powerful, secure, and user-friendly web solutions. I take pride in crafting robust applications that elevate businesses and empower users.
                   </p>
-                  <button onClick={() => console.log('connect')}>Let&#39;s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>}
             </TrackVisibility>
           </Col>
-<<<<<<< HEAD
-          <Col xs={12} md={6} xl={5} className="mt-4 align-items-center">
-=======
           <Col xs={12} md={6} xl={5} className="mt-4">
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <div className="bannerbox m-auto">
                     <div className="bannerimg">
                       <img className="m-auto p-auto" src={headerImg} alt="Header Img" />
-<<<<<<< HEAD
                       <h2>MERN stack developer</h2>
                       <Button variant="outline-primary">
-=======
-                        <h2>MERN stack developer</h2>
-                        <Button variant="outline-primary">
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
                         <a href="/" className="text-white text-decoration-none">Hire Me</a>
                       </Button>
                     </div>

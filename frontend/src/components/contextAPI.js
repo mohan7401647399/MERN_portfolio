@@ -55,11 +55,7 @@ export default function UserContextProvider({ children }) {
     const toRotate = ["MERN stack Developer", "Web Designer", "UI/UX Designer"];
     const period = 2000;
 
-<<<<<<< HEAD
     const tick = () => {
-=======
-       const tick = () => {
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -84,26 +80,15 @@ export default function UserContextProvider({ children }) {
         }
     }
 
-<<<<<<< HEAD
     useEffect(() => {
-=======
-     useEffect(() => {
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
         let ticker = setInterval(() => {
             tick();
         }, delta);
         return () => { clearInterval(ticker) };
-<<<<<<< HEAD
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [text])
 
 
-=======
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [text])
-
-    
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
     //Skills page functions
     const responsive = {
         superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
@@ -111,7 +96,7 @@ export default function UserContextProvider({ children }) {
         tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
         mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
     };
-    
+
     //project page functions
     const projects = [
         { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", imgUrl: projImg1 },
@@ -120,11 +105,7 @@ export default function UserContextProvider({ children }) {
         { title: "Instagram", link: "https://instagram-clone-fc9fd.web.app/", imgUrl: projImg4 }
     ];
 
-<<<<<<< HEAD
     //MERN page functions
-=======
-     //MERN page functions
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
     const MERNprojects = [
         { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", imgUrl: InventoryApp },
         { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", imgUrl: Netflix },
@@ -146,16 +127,13 @@ export default function UserContextProvider({ children }) {
         setFormDetails({ ...formDetails, [name]: value })
     }
 
-    axios.defaults.withCredentials = true;
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtonText("Sending...");
-<<<<<<< HEAD
-=======
         axios.defaults.withCredentials = true;
->>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
         await axios.post('https://portfolio-backend-ysb8.onrender.com/contact', { formDetails })
             .then(res => {
+                console.log(res.data.code);
                 if (res.data.code === 200) {
                     setStatus({ success: true, message: 'Message sent successfully' });
                 } else {
@@ -166,7 +144,7 @@ export default function UserContextProvider({ children }) {
         setFormDetails(formInitialDetails);
         setTimeout(() => {
             setStatus({})
-        }, 2000)
+        }, 5000)
     }
 
     return (
@@ -175,3 +153,4 @@ export default function UserContextProvider({ children }) {
         </userContext.Provider>
     );
 };
+

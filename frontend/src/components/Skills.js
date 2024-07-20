@@ -30,6 +30,7 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         <p> <li>Front-End Development: Proficient in HTML, CSS, and JavaScript, I create stunning and responsive user interfaces that leave a lasting impression.</li>
+<<<<<<< HEAD
                             <li>Back-End Development: Adept at server-side programming with Node.js and Python, handling complex business logic and data management efficiently.</li>
                             <li>Database Management: Skilled in working with SQL and NoSQL databases like MySQL, PostgreSQL, MongoDB, and Firebase, ensuring data integrity and seamless performance.</li>
                         </p>
@@ -153,4 +154,33 @@ export const Skills = () => {
             <img className="background-image-left" src={colorSharp} alt="bg" />
         </section>
     )
+=======
+                        <li>Back-End Development: Adept at server-side programming with Node.js and Python, handling complex business logic and data management efficiently.</li>
+                        <li>Database Management: Skilled in working with SQL and NoSQL databases like MySQL, PostgreSQL, MongoDB, and Firebase, ensuring data integrity and seamless performance.</li></p>
+                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider w-100">
+                            <div className="item">
+                                <img src={meter1} alt="MERN" />
+                                <h5>MERN</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter2} alt="React_JS" />
+                                <h5>React JS</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter3} alt="UI/UX_design" />
+                                <h5>UI/UX design</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter1} alt="Web_Development" />
+                                <h5>Web Development</h5>
+                            </div>
+                        </Carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img className="background-image-left" src={colorSharp} alt="bg" />
+    </section>
+  )
+>>>>>>> 84e77a20de81e704614f8a1010ccb1d1f67401c9
 }

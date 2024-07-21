@@ -10,13 +10,13 @@ import Button from 'react-bootstrap/Button';
 
 export const Banner = () => {
 
-  const { text } = useUserContext();
+  const { text, scrolled } = useUserContext();
 
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+        <Row className="align-items-center">
+          <Col xs={12} md={6} xl={7} className={scrolled ? "animate1" : "show-animate1"}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>

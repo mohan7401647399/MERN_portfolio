@@ -30,7 +30,7 @@ export default function UserContextProvider({ children }) {
 
     useEffect(() => {
         const onScroll = () => {
-            if (window.scrollY > 0) {
+            if (window.scrollY > 0 || window.scrollY > 0) {
                 setScrolled(true);
             } else {
                 setScrolled(false);

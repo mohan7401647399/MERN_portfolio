@@ -7,12 +7,12 @@ import { useUserContext } from './contextAPI';
 
 export const Projects = () => {
 
-  const { projects, MERNprojects } = useUserContext();
+  const { projects, MERNprojects, scrolled } = useUserContext();
 
   return (
     <section className="project" id="project">
       <Container>
-        <Row>
+        <Row className={scrolled ? "animateSkill" : "show-animateSkill"}>
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
@@ -26,7 +26,7 @@ export const Projects = () => {
                       <Nav.Item> <Nav.Link eventKey="third">Games</Nav.Link> </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                       <Tab.Pane eventKey="first">
+                      <Tab.Pane eventKey="first">
                         <Row> {MERNprojects.map((project, index) => { return (<MernProjectsCard key={index} {...project} />) })}
                         </Row>
                       </Tab.Pane>

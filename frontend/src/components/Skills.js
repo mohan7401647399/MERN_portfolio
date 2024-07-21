@@ -1,6 +1,6 @@
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
-import { Card, Col, Image, ProgressBar, Row } from "react-bootstrap";
+import { Col, Image, ProgressBar, Row } from "react-bootstrap";
 import HTML from '../assets/img/HTML.png'
 import CSS from '../assets/img/CSS.png'
 import JS from '../assets/img/JS.png'
@@ -20,13 +20,17 @@ import POSTMAN from '../assets/img/POSTMAN.png'
 import ANGULAR from '../assets/img/ANGULAR.png'
 import FIREBASE from '../assets/img/FIREBASE.png'
 import NETLIFY from '../assets/img/NETLIFY.png'
+import Cart from './Cart';
+import { useUserContext } from './contextAPI';
 
 export const Skills = () => {
+
+    const { scrolled } = useUserContext();
 
     return (
         <section className="sill p-2 m-2 d-flex" id="skills">
             <Row>
-                <Col xl={12} sm={12} md={12} lg={12} xxl={12}>
+                <Col xl={12} sm={12} md={12} lg={12} xxl={12} className={scrolled ? "animateSkill" : "show-animateSkill"}>
                     <div className="skill-bx wow zoomIn">
                         <h2>Technologies and Tools</h2>
                         <p> <li>Front-End Development: Proficient in HTML, CSS, and JavaScript, I create stunning and responsive user interfaces that leave a lasting impression.</li>
@@ -36,118 +40,118 @@ export const Skills = () => {
                     </div>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={HTML} thumbnail className=" border-0" />
                         <ProgressBar now={90} label={"HTML"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
-                <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5 skillCard" id='skillChild'>
+                    <Cart>
                         <Image src={CSS} thumbnail className=" border-0" />
                         <ProgressBar now={90} label={"CSS"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={JS} thumbnail className=" border-0" />
                         <ProgressBar now={80} label={"JS"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={BOOTSTRAP} thumbnail className=" border-0" />
                         <ProgressBar now={70} label={"BOOTSTRAP"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={SQL} thumbnail className=" border-0" />
                         <ProgressBar now={80} label={"SQL"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
-                        <Card.Img src={MONGODB} />
+                    <Cart>
+                        <Image src={MONGODB} thumbnail className=" border-0" />
                         <ProgressBar now={60} label={"MongoDB"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={SASS} thumbnail className=" border-0" />
                         <ProgressBar now={50} label={"SASS"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={TAILWIND} thumbnail className=" border-0" />
                         <ProgressBar now={50} label={"Tailwind"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={REACT} thumbnail className=" border-0" />
                         <ProgressBar now={80} label={"React"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={REACT_NATIVE} thumbnail className=" border-0" />
                         <ProgressBar now={50} label={"React-Native"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={NEXT_JS} thumbnail className=" border-0" />
                         <ProgressBar now={70} label={"NextJs"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={PYTHON} thumbnail className=" border-0" />
                         <ProgressBar now={60} label={"Python"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={NODEJS} thumbnail className=" border-0" />
                         <ProgressBar now={80} label={"NodeJs"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={EXPRESS_JS} thumbnail className=" border-0" />
                         <ProgressBar now={80} label={"ExpressJs"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={REDUX} thumbnail className=" border-0" />
                         <ProgressBar now={60} label={"Redux"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={POSTMAN} thumbnail className=" border-0" />
                         <ProgressBar now={70} label={"Postman"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={ANGULAR} thumbnail className=" border-0" />
                         <ProgressBar now={50} label={"Angular"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={NETLIFY} thumbnail className=" border-0" />
                         <ProgressBar now={90} label={"Netlify"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
-                    <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100">
+                    <Cart>
                         <Image src={FIREBASE} thumbnail className=" border-0" />
                         <ProgressBar now={70} label={"Firebase"} animated />
-                    </Card>
+                    </Cart>
                 </Col>
             </Row>
             <img className="background-image-left" src={colorSharp} alt="bg" />

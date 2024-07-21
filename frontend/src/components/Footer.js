@@ -2,13 +2,16 @@ import { Container, Row, Col } from "react-bootstrap";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import { useUserContext } from './contextAPI';
 
 export const Footer = () => {
+
+  const { scrolled } = useUserContext();
 
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-items-center">
+        <Row className={scrolled ? "animate2" : "show-animate2"}>
           <Col size={12} sm={6} md={4} lg={4} xs={12} xl={4} xxl={4} className="text-center text-sm-start mt-3">
             <a href="/" className="text-decoration-none text-info"><h1>R.Mohan</h1></a>
             <span>Junior MERN stack developer</span>

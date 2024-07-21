@@ -26,7 +26,7 @@ export const Banner = () => {
                   <h1>{`Hi! I'm Mohan`} <span className="txt-rotate"><span className="wrap">{text}</span></span></h1>
                   <p>👋 Hello! I'm <span className="text-warning">Mohan R</span>, a passionate and detail-oriented Web Application Developer with a track record of creating powerful, secure, and user-friendly web solutions. I take pride in crafting robust applications that elevate businesses and empower users.
                   </p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => console.log('connect')}>Let&#39;s Connect <ArrowRightCircle size={25} /></button>
                 </div>}
             </TrackVisibility>
           </Col>

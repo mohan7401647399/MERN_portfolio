@@ -45,7 +45,7 @@ export const Skills = () => {
                         <ProgressBar now={90} label={"HTML"} animated />
                     </Cart>
                 </Col>
-                <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5 skillCard" id='skillChild'>
+                <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
                         <Image src={CSS} thumbnail className=" border-0" />
                         <ProgressBar now={90} label={"CSS"} animated />
@@ -153,8 +153,8 @@ export const Skills = () => {
                         <ProgressBar now={70} label={"Firebase"} animated />
                     </Cart>
                 </Col>
-            </Row>
+            </Row >
             <img className="background-image-left" src={colorSharp} alt="bg" />
-        </section>
+        </section >
     )
 }

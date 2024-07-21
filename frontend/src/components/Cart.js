@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap'
 
 export default function Cart({ children }) {
     return (
-        <Card className="m-auto p-1 d-flex justify-content-between h-100 w-100" style={{ boxShadow: "10px 10px 10px grey" }}>
+        <Card className="skillCard m-auto p-1 d-flex justify-content-between h-100 w-100" style={{ boxShadow: "10px 10px 10px grey" }}>
             {children}
         </Card>
     )

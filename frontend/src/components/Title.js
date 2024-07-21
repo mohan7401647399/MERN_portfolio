@@ -13,7 +13,7 @@ export default function Title() {
     const { scrolled } = useUserContext();
 
     return (
-        <section className='banner' style={{ background: "rgba(192,192,192,0)", height: "700px" }}>
+        <section className='banner m-auto' style={{ background: "rgba(192,192,192,0)", minHeight: "100vh" }}>
             <Container className='d-flex justify-content-center align-items-center text-center'>
                 <Row className={scrolled ? "animate" : "show-animate"}>
                     <Col xs={12} md={12} xl={12} sm={12} lg={12}>

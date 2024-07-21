@@ -895,11 +895,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .skillCard:hover{
   background-position: 80% 20%;
-  transform: rotate3d(0.5,1,0,20deg);
-  -webkit-transform: rotate3d(0.5,1,0,20deg);
-  -moz-transform: rotate3d(0.5,1,0,20deg);
-  -ms-transform: rotate3d(0.5,1,0,20deg);
-  -o-transform: rotate3d(0.5,1,0,20deg);
+  transform: rotate3d(0.5,1,0,30deg);
+  -webkit-transform: rotate3d(0.5,1,0,30deg);
+  -moz-transform: rotate3d(0.5,1,0,30deg);
+  -ms-transform: rotate3d(0.5,1,0,30deg);
+  -o-transform: rotate3d(0.5,1,0,30deg);
 }
 
 section, section.animate1, section.animate {

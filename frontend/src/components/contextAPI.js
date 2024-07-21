@@ -24,7 +24,7 @@ export const useUserContext = () => {
 
 export default function UserContextProvider({ children }) {
 
-    //  Navbar functions
+    //  Scroll functions
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
@@ -144,7 +144,7 @@ export default function UserContextProvider({ children }) {
         setFormDetails(formInitialDetails);
         setTimeout(() => {
             setStatus({})
-        }, 5000)
+        }, 2000)
     }
 
     return (

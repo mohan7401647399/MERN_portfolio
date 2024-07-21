@@ -1,11 +1,8 @@
 import { Col } from "react-bootstrap";
 import { BsLink } from "react-icons/bs";
 import Button from 'react-bootstrap/Button';
-import { useUserContext } from './contextAPI';
 
 export const ProjectCard = ({ title, link, imgUrl }) => {
-
-  const { scrolled } = useUserContext();
 
   return (
     <section >

@@ -5,6 +5,7 @@ import projImg3 from "../assets/img/spotify.png";
 import projImg4 from "../assets/img/instagram.png";
 import MernImg3 from "../assets/img/task_app.png";
 import InventoryApp from "../assets/img/Inventory_app.png";
+import DiceGame from "../assets/img/dice.jpg";
 import Netflix from "../assets/img/Netflix.png";
 import MernImg1 from "../assets/img/Login_signup.png";
 import MernImg2 from "../assets/img/money_tracker.png";
@@ -16,9 +17,9 @@ export const userContext = createContext(null);
 
 //      data pass to all components
 export const useUserContext = () => {
-    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects } = useContext(userContext);
+    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames } = useContext(userContext);
 
-    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects };
+    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames };
 };
 
 
@@ -114,6 +115,11 @@ export default function UserContextProvider({ children }) {
         { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", imgUrl: MernImg3 }
     ];
 
+    // JS Games
+    const JsGames = [
+        { title: "Dice_game", link: "https://papaya-kulfi-ae2a2c.netlify.app/", imgUrl: DiceGame },
+    ];
+
     //contact page functions
     const formInitialDetails = { firstName: '', lastName: '', email: '', phone: '', message: '' }
     const [formDetails, setFormDetails] = useState(formInitialDetails);
@@ -148,7 +154,7 @@ export default function UserContextProvider({ children }) {
     }
 
     return (
-        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects }}>
+        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames }}>
             {children}
         </userContext.Provider>
     );

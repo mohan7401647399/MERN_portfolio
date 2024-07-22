@@ -7,8 +7,12 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import Title from './components/Title';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    console.log("page reloaded");
+  }, [])
   return (
     <div className="App">
       <NavBar />

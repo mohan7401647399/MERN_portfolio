@@ -43,7 +43,7 @@ export const Contact = () => {
                         <textarea id="message" rows="6" name="message" required value={formDetails.message} placeholder="Message" onChange={onFormUpdate}></textarea>
                         <button type="submit" onClick={formDetails.firstName === "" || formDetails.lastName === "" || formDetails.email === "" || formDetails.phone === "" || formDetails.message === "" ? "" : notify}>
                           <span>{buttonText}</span>
-                          <ToastContainer />
+                          <ToastContainer position="bottom-left" />
                         </button>
                         <p className={status.success === false ? "text-danger" : "text-info"}>{status.message}</p>
                       </Col>

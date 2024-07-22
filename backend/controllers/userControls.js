@@ -1,12 +1,34 @@
 
 const userRouter = require("express").Router(),
   User = require("../Models/Auth.model"),
-  nodemailer = require("nodemailer");
+  nodemailer = require("nodemailer")
+// bcrypt = require("bcryptjs")
 
-userRouter.post("/contact", (req, res) => {
+userRouter.post("/contact", async (req, res) => {
 
   const { firstName, lastName, email, message, phone } = req.body;
   try {
+    // if (req.body) {
+    // const hashedPassword = bcrypt.hashSync(password, 10)
+    try {
+      const newUser = new User(req.body)
+      await newUser.save().then((res) => {
+        if (res._id) {
+          return res.status(200).json({
+            success: true,
+            message: "User created successfully",
+            data: response
+          })
+        } else {
+          throw new Error({ message: "Something went wrong" })
+        }
+      })
+      // res.status(201).json({ message: "User created successfully" })
+    } catch (error) {
+      console.log(error.message);
+    }
+    // }
+
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       host: "smtp.gmail.com",
@@ -25,8 +47,7 @@ userRouter.post("/contact", (req, res) => {
       html: `<p>Name: ${firstName} ${lastName}</p>
                  <p>Email: ${email}</p>
                  <p>Phone: ${phone}</p>
-                 <p>Message: ${message}</p>
-                 <h4>${req.body} </h4>`
+                 <p>Message: ${message}</p>`
     };
 
     transporter.sendMail(mailOptions, (error) => {

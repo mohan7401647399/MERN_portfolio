@@ -11,7 +11,7 @@ export const ProjectCard = ({ title, link, imgUrl }) => {
         <div className="proj-txtx">
           <h4>{title}</h4>
           <Button variant="outline-success">
-            <a className="text-white text-decoration-none" target="_blank" href={link}>Click here <BsLink />
+            <a className="text-white text-decoration-none" target="_blank" rel="noreferrer" href={link}>Click here <BsLink />
             </a>
           </Button>
         </div>
@@ -29,7 +29,7 @@ export const MernProjectsCard = ({ title, link, imgUrl }) => {
         <div className="proj-txtx">
           <h4>{title}</h4>
           <Button variant="outline-success">
-            <a className="text-white text-decoration-none" target="_blank" href={link}>Click here <BsLink />
+            <a className="text-white text-decoration-none" target="_blank" rel="noreferrer" href={link}>Click here <BsLink />
             </a>
           </Button>
         </div>
@@ -47,7 +47,7 @@ export const JsGamesCard = ({ title, link, imgUrl }) => {
         <div className="proj-txtx">
           <h4>{title}</h4>
           <Button variant="outline-success">
-            <a className="text-white text-decoration-none" target="_blank" href={link}>Click here <BsLink />
+            <a className="text-white text-decoration-none" target="_blank" rel="noreferrer" href={link}>Click here <BsLink />
             </a>
           </Button>
         </div>

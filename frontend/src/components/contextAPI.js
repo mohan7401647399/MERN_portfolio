@@ -104,16 +104,16 @@ export default function UserContextProvider({ children }) {
         { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", imgUrl: projImg1 },
         { title: "Youtube", link: "https://clone-90a52.web.app/", imgUrl: projImg2 },
         { title: "Spotify", link: "https://spotify-clone-7276b.web.app/", imgUrl: projImg3 },
-        { title: "Instagram", link: "https://instagram-clone-fc9fd.web.app/", imgUrl: projImg4 }
+        { title: "Instagram", link: "https://instagram-react-clone.netlify.app/", imgUrl: projImg4 }
     ];
 
     //MERN page functions
     const MERNprojects = [
         { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", imgUrl: InventoryApp },
         { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", imgUrl: Netflix },
+        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", imgUrl: MernImg3 },
         { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
-        { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 },
-        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", imgUrl: MernImg3 }
+        { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 }
     ];
 
     // JS Games

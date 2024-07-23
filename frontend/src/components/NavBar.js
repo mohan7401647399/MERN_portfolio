@@ -6,7 +6,7 @@ export function NavBar() {
   return (
     <Navbar expand={"md" || "lg" || "xl"} className=" bg-black">
       <Container fluid>
-        <Navbar.Brand href="/" className='text-primary'> <h4><b>Mohan</b></h4>  </Navbar.Brand>
+        <Navbar.Brand href="/" className='text-primary'> <h4><b>&#123; Mohan &#125; </b></h4>  </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

@@ -1001,3 +1001,33 @@ section .show-animateSkill{
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
 }
+
+
+/* Title */
+
+.title{
+  background: linear-gradient(45deg, #ff6b6b, #feca57, #1dd1a1, #54a0ff, #5f27cd);
+  background-clip: text;
+  color: transparent;
+}
+
+
+.titleTech{
+  background: radial-gradient(circle, #ff6b6b, #feca57, #1dd1a1, #54a0ff, #5f27cd);
+  background-clip: text;
+  color: transparent;
+}
+
+
+.titleProject{
+  background: linear-gradient(45deg, #ff6b6b, #feca57, #1dd1a1, #54a0ff, #5f27cd);
+  background-clip: text;
+  color: transparent;
+}
+
+
+.titleContact{
+  background: linear-gradient(to right, #ff6347,#330867 100%);
+  background-clip: text;
+  color: transparent;
+}

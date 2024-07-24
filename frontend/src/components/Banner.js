@@ -23,9 +23,11 @@ export const Banner = () => {
                   <span className="tagline">Welcome to my Portfolio</span>
                   <span className="m-3 p-2" style={{ "fontSize": "35px" }}><a className="text-warning" href={resume} download="resume"><BsArrowDownSquareFill />
                   </a></span>
-                  <h1>{`Hi! I'm Mohan`} <span className="txt-rotate"><span className="wrap">{text}</span></span></h1>
-                  <p>👋 Hello! I'm <span className="text-warning">Mohan R</span>, a passionate and detail-oriented Web Application Developer with a track record of creating powerful, secure, and user-friendly web solutions. I take pride in crafting robust applications that elevate businesses and empower users.
+                  <h1>{`Hi! I'm Mohan`} <span className="txt-rotate"><span className="wrap text-info">{text}</span></span></h1>
+                  <p>
+                    👋 Hello! I'm <span className="text-warning">Mohan R</span>, a passionate and detail-oriented Web Application Developer with a track record of creating powerful, secure, and user-friendly web solutions. I take pride in crafting robust applications that elevate businesses and empower users.
                   </p>
+                  <b className=" text-success">I will not rest untill i reach my goal</b>
                   <button onClick={() => console.log('connect')}>Let&#39;s Connect <ArrowRightCircle size={25} /></button>
                 </div>}
             </TrackVisibility>

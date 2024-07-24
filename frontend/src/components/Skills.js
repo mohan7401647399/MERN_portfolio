@@ -32,7 +32,7 @@ export const Skills = () => {
             <Row>
                 <Col xl={12} sm={12} md={12} lg={12} xxl={12} className={scrolled ? "animateSkill" : "show-animateSkill"}>
                     <div className="skill-bx wow zoomIn">
-                        <h2>Technologies and Tools</h2>
+                        <h2 className='titleTech'>Technologies and Tools</h2>
                         <p> <li>Front-End Development: Proficient in HTML, CSS, and JavaScript, I create stunning and responsive user interfaces that leave a lasting impression.</li>
                             <li>Back-End Development: Adept at server-side programming with Node.js and Python, handling complex business logic and data management efficiently.</li>
                             <li>Database Management: Skilled in working with SQL and NoSQL databases like MySQL, PostgreSQL, MongoDB, and Firebase, ensuring data integrity and seamless performance.</li>

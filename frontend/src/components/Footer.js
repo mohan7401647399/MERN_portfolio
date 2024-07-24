@@ -9,7 +9,7 @@ export const Footer = () => {
   const { scrolled } = useUserContext();
 
   return (
-    <footer className="footer">
+    <footer className="footer m-2">
       <Container>
         <Row className={scrolled ? "animate2" : "show-animate2"}>
           <Col size={12} sm={6} md={4} lg={4} xs={12} xl={4} xxl={4} className="text-center text-sm-start mt-3">
@@ -26,7 +26,11 @@ export const Footer = () => {
           <Col size={12} sm={12} md={4} lg={4} xs={12} xl={4} xxl={4} className="text-center m-auto">
             <p>Phone/Whatsapp: 7401647399 / 8667764437</p>
             <p>Official Mail id: mtm.kcs@gmail.com</p>
-            <p>Copyright 2023. All Rights Reserved</p>
+          </Col>
+          <Col className="text-center text-secondary">
+            &copy; Copyright 2024 Mohan
+            <i class="bi bi-c-circle-fill"></i>
+
           </Col>
         </Row>
       </Container>

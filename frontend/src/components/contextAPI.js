@@ -54,7 +54,7 @@ export default function UserContextProvider({ children }) {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = ["MERN stack Developer", "UI/UX Designer", "Front-end developer", "Backend developer", "Mobile App developer"];
+    const toRotate = ["FullStack Developer", "UI/UX Designer", "Front-end developer", "Backend developer", "Mobile App developer"];
     const period = 2000;
 
     const tick = () => {
@@ -101,24 +101,24 @@ export default function UserContextProvider({ children }) {
 
     //project page functions
     const projects = [
-        { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", imgUrl: projImg1 },
-        { title: "Youtube", link: "https://clone-90a52.web.app/", imgUrl: projImg2 },
-        { title: "Spotify", link: "https://spotify-clone-7276b.web.app/", imgUrl: projImg3 },
-        { title: "Instagram", link: "https://instagram-react-clone.netlify.app/", imgUrl: projImg4 }
+        { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", gitHub: "https://github.com/mohan7401647399/Ecommerce_react_redux", imgUrl: projImg1 },
+        { title: "Youtube", link: "https://clone-90a52.web.app/", gitHub: "https://github.com/mohan7401647399/React-Youtube-Clone", imgUrl: projImg2 },
+        { title: "Spotify", link: "https://spotify-clone-7276b.web.app/", gitHub: "https://github.com/mohan7401647399/Spotify-Clone", imgUrl: projImg3 },
+        { title: "Instagram", link: "https://instagram-react-clone.netlify.app/", gitHub: "https://github.com/mohan7401647399/React_Instagram_Clone", imgUrl: projImg4 }
     ];
 
     //MERN page functions
     const MERNprojects = [
-        { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", imgUrl: InventoryApp },
-        { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", imgUrl: Netflix },
-        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", imgUrl: MernImg3 },
-        { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
-        { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 }
+        { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", gitHub: "https://github.com/mohan7401647399/MERN-Inventory-app", imgUrl: InventoryApp },
+        { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", gitHub: "https://github.com/mohan7401647399/Netflix_clone_MERN", imgUrl: Netflix },
+        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", gitHub: "https://github.com/mohan7401647399/MERN_task_app", imgUrl: MernImg3 },
+        { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
+        { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 }
     ];
 
     // JS Games
     const JsGames = [
-        { title: "Dice_game", link: "https://papaya-kulfi-ae2a2c.netlify.app/", imgUrl: DiceGame },
+        { title: "Dice_game", link: "https://papaya-kulfi-ae2a2c.netlify.app/", gitHub: "https://github.com/mohan7401647399/Dice-game---JS-DOM", imgUrl: DiceGame },
     ];
 
     //contact page functions

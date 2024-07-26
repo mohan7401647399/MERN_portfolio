@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import Title from './components/Title';
 import { useEffect } from 'react';
+import About from './components/About';
 // import DarkLightTest from './components/DarkLightTest';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <NavBar />
       <Title />
       <Banner />
+      <About />
       <Skills />
       <Projects />
       <Contact />

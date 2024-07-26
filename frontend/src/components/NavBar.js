@@ -18,9 +18,10 @@ export function NavBar() {
             defaultActiveKey="/home"
           >
             <Nav.Link href="#home" className=' text-white'>Home</Nav.Link>
-            <Nav.Link href="#skills" className=' text-white'>skills</Nav.Link>
-            <Nav.Link href="#project" className=' text-white'>projects</Nav.Link>
-            <Nav.Link href="#connect" className=' text-white'>contact</Nav.Link>
+            <Nav.Link href="#about" className=' text-white'>About</Nav.Link>
+            <Nav.Link href="#skills" className=' text-white'>Skills</Nav.Link>
+            <Nav.Link href="#project" className=' text-white'>Projects</Nav.Link>
+            <Nav.Link href="#connect" className=' text-white'>Contact</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

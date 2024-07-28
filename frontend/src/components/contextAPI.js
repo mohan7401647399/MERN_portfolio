@@ -7,6 +7,7 @@ import MernImg3 from "../assets/img/task_app.png";
 import InventoryApp from "../assets/img/Inventory_app.png";
 import DiceGame from "../assets/img/dice.jpg";
 import BreakoutGame from "../assets/img/Breakout.jpg";
+import FroggerGame from "../assets/img/Frogger.png";
 import Netflix from "../assets/img/Netflix.png";
 import MernImg1 from "../assets/img/Login_signup.png";
 import MernImg2 from "../assets/img/money_tracker.png";
@@ -121,6 +122,7 @@ export default function UserContextProvider({ children }) {
     const JsGames = [
         { title: "Dice_game", link: "https://papaya-kulfi-ae2a2c.netlify.app/", gitHub: "https://github.com/mohan7401647399/Dice-game---JS-DOM", imgUrl: DiceGame },
         { title: "Breakout_game", link: "https://relaxed-mooncake-cc1571.netlify.app/", gitHub: "https://github.com/mohan7401647399/Javascript_games/tree/main/Breakout", imgUrl: BreakoutGame },
+        { title: "Frogger_game", link: "https://froggergamejs.netlify.app/", gitHub: "https://github.com/mohan7401647399/Javascript_games/tree/main/Frogger", imgUrl: FroggerGame },
     ];
 
     //contact page functions

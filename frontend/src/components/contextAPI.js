@@ -106,7 +106,7 @@ export default function UserContextProvider({ children }) {
     const MERNprojects = [
         { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", gitHub: "https://github.com/mohan7401647399/MERN-Inventory-app", imgUrl: InventoryApp },
         { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", gitHub: "https://github.com/mohan7401647399/Netflix_clone_MERN", imgUrl: Netflix },
-        { title: "Zoom-Clone", link: "https://zoom-clone-qews1sb4j-mohanrs-projects.vercel.app/", gitHub: "https://github.com/mohan7401647399/zoom-clone", imgUrl: Zoom },
+        { title: "Zoom-Clone", link: "https://zoom-clone-inky-rho.vercel.app/", gitHub: "https://github.com/mohan7401647399/zoom-clone", imgUrl: Zoom },
         { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", gitHub: "https://github.com/mohan7401647399/MERN_task_app", imgUrl: MernImg3 },
         { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
         { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 }

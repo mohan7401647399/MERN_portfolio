@@ -9,6 +9,7 @@ import DiceGame from "../assets/img/dice.jpg";
 import BreakoutGame from "../assets/img/Breakout.jpg";
 import FroggerGame from "../assets/img/Frogger.png";
 import Netflix from "../assets/img/Netflix.png";
+import Zoom from "../assets/img/Zoom.png";
 import MernImg1 from "../assets/img/Login_signup.png";
 import MernImg2 from "../assets/img/money_tracker.png";
 import axios from 'axios';
@@ -101,21 +102,22 @@ export default function UserContextProvider({ children }) {
         mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
     };
 
+    //MERN page functions
+    const MERNprojects = [
+        { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", gitHub: "https://github.com/mohan7401647399/MERN-Inventory-app", imgUrl: InventoryApp },
+        { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", gitHub: "https://github.com/mohan7401647399/Netflix_clone_MERN", imgUrl: Netflix },
+        { title: "Zoom-Clone", link: "https://zoom-clone-qews1sb4j-mohanrs-projects.vercel.app/", gitHub: "https://github.com/mohan7401647399/zoom-clone", imgUrl: Zoom },
+        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", gitHub: "https://github.com/mohan7401647399/MERN_task_app", imgUrl: MernImg3 },
+        { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
+        { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 }
+    ];
+
     //project page functions
     const projects = [
         { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", gitHub: "https://github.com/mohan7401647399/Ecommerce_react_redux", imgUrl: projImg1 },
         { title: "Youtube", link: "https://clone-90a52.web.app/", gitHub: "https://github.com/mohan7401647399/React-Youtube-Clone", imgUrl: projImg2 },
         { title: "Spotify", link: "https://spotify-clone-7276b.web.app/", gitHub: "https://github.com/mohan7401647399/Spotify-Clone", imgUrl: projImg3 },
         { title: "Instagram", link: "https://instagram-react-clone.netlify.app/", gitHub: "https://github.com/mohan7401647399/React_Instagram_Clone", imgUrl: projImg4 }
-    ];
-
-    //MERN page functions
-    const MERNprojects = [
-        { title: "Inventory_App", link: "https://inventorybillingapp-mern.netlify.app", gitHub: "https://github.com/mohan7401647399/MERN-Inventory-app", imgUrl: InventoryApp },
-        { title: "Netflix", link: "https://merry-daffodil-f87227.netlify.app", gitHub: "https://github.com/mohan7401647399/Netflix_clone_MERN", imgUrl: Netflix },
-        { title: "Task_App", link: "https://mern-task-app-react.netlify.app/", gitHub: "https://github.com/mohan7401647399/MERN_task_app", imgUrl: MernImg3 },
-        { title: "Login_Signup", link: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/Login_signup", imgUrl: MernImg1 },
-        { title: "Money_tracker", link: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", gitHub: "https://github.com/mohan7401647399/MERN/tree/main/money_tracker", imgUrl: MernImg2 }
     ];
 
     // JS Games

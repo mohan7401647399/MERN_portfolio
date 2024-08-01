@@ -902,13 +902,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   -o-transition: all 0.5s ease-in-out;
 }
 
+
 .skillCard:hover{
   background-position: 80% 20%;
-  transform: rotate3d(0.5,1,0,30deg);
-  -webkit-transform: rotate3d(0.5,1,0,30deg);
-  -moz-transform: rotate3d(0.5,1,0,30deg);
-  -ms-transform: rotate3d(0.5,1,0,30deg);
-  -o-transform: rotate3d(0.5,1,0,30deg);
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
 }
 
 section, section.animate1, section.animate {
@@ -941,11 +942,11 @@ section, section.animate1, section.animate {
 
 
 .animate1{
-  transition: 2s;
-  -webkit-transition: 2s;
-  -moz-transition: 2s;
-  -ms-transition: 2s;
-  -o-transition: 2s;
+  transition: 4s;
+  -webkit-transition: 4s;
+  -moz-transition: 4s;
+  -ms-transition: 4s;
+  -o-transition: 4s;
 }
 
 .animate1{
@@ -965,11 +966,11 @@ section, section.animate1, section.animate {
 }
 
 section .animateSkill{
-  transition: 2s;
-  -webkit-transition: 2s;
-  -moz-transition: 2s;
-  -ms-transition: 2s;
-  -o-transition: 2s;
+  transition: 4s;
+  -webkit-transition: 4s;
+  -moz-transition: 4s;
+  -ms-transition: 4s;
+  -o-transition: 4s;
 }
 
 section .animateSkill{

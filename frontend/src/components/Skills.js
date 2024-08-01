@@ -42,115 +42,115 @@ export const Skills = () => {
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={HTML} thumbnail className=" border-0" />
+                        <Image src={HTML} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={90} label={"HTML"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={CSS} thumbnail className=" border-0" />
+                        <Image src={CSS} thumbnail className=" border-0" style={{ width: "700px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={90} label={"CSS"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={JS} thumbnail className=" border-0" />
+                        <Image src={JS} thumbnail className=" border-0" style={{ width: "700px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={80} label={"JS"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={BOOTSTRAP} thumbnail className=" border-0" />
+                        <Image src={BOOTSTRAP} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={70} label={"BOOTSTRAP"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={SQL} thumbnail className=" border-0" />
+                        <Image src={SQL} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={80} label={"SQL"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={MONGODB} thumbnail className=" border-0" />
+                        <Image src={MONGODB} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={60} label={"MongoDB"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={SASS} thumbnail className=" border-0" />
+                        <Image src={SASS} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={50} label={"SASS"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={TAILWIND} thumbnail className=" border-0" />
+                        <Image src={TAILWIND} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={50} label={"Tailwind"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={REACT} thumbnail className=" border-0" />
+                        <Image src={REACT} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={80} label={"React"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={REACT_NATIVE} thumbnail className=" border-0" />
+                        <Image src={REACT_NATIVE} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={50} label={"React-Native"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={NEXT_JS} thumbnail className=" border-0" />
+                        <Image src={NEXT_JS} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={70} label={"NextJs"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={PYTHON} thumbnail className=" border-0" />
+                        <Image src={PYTHON} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={60} label={"Python"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={NODEJS} thumbnail className=" border-0" />
+                        <Image src={NODEJS} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={80} label={"NodeJs"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={EXPRESS_JS} thumbnail className=" border-0" />
+                        <Image src={EXPRESS_JS} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={80} label={"ExpressJs"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={REDUX} thumbnail className=" border-0" />
+                        <Image src={REDUX} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={60} label={"Redux"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={POSTMAN} thumbnail className=" border-0" />
+                        <Image src={POSTMAN} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={70} label={"Postman"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={ANGULAR} thumbnail className=" border-0" />
+                        <Image src={ANGULAR} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={50} label={"Angular"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={NETLIFY} thumbnail className=" border-0" />
+                        <Image src={NETLIFY} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={90} label={"Netlify"} animated />
                     </Cart>
                 </Col>
                 <Col xs={3} xl={2} sm={3} md={3} lg={2} xxl={4} className="mb-5">
                     <Cart>
-                        <Image src={FIREBASE} thumbnail className=" border-0" />
+                        <Image src={FIREBASE} thumbnail className=" border-0" style={{ width: "500px", aspectRatio: "4/3", objectFit: "contain" }} />
                         <ProgressBar now={70} label={"Firebase"} animated />
                     </Cart>
                 </Col>

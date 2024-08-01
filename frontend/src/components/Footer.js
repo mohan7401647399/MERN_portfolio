@@ -33,8 +33,6 @@ export const Footer = () => {
           </Col>
           <Col className="text-center text-secondary">
             &copy; Copyright 2024 Mohan
-            <i class="bi bi-c-circle-fill"></i>
-
           </Col>
         </Row>
       </Container>

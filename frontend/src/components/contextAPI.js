@@ -3,7 +3,7 @@ import projImg1 from "../assets/img/ecommerce.png";
 import projImg2 from "../assets/img/youtube.png";
 import projImg3 from "../assets/img/spotify.png";
 import projImg4 from "../assets/img/instagram.png";
-import MernImg3 from "../assets/img/task_app.png";
+import projImg5 from "../assets/img/Whatsapp.png";
 import InventoryApp from "../assets/img/Inventory_app.png";
 import DiceGame from "../assets/img/dice.jpg";
 import BreakoutGame from "../assets/img/Breakout.jpg";
@@ -12,6 +12,7 @@ import Netflix from "../assets/img/Netflix.png";
 import Zoom from "../assets/img/Zoom.png";
 import MernImg1 from "../assets/img/Login_signup.png";
 import MernImg2 from "../assets/img/money_tracker.png";
+import MernImg3 from "../assets/img/task_app.png";
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -115,6 +116,7 @@ export default function UserContextProvider({ children }) {
     //project page functions
     const projects = [
         { title: "E-Commerce", link: "https://ecommerce-47401.web.app/", gitHub: "https://github.com/mohan7401647399/Ecommerce_react_redux", imgUrl: projImg1 },
+        { title: "Whatsapp", link: "https://tiny-crepe-854021.netlify.app/", gitHub: "https://github.com/mohan7401647399/Whatsapp_Clone", imgUrl: projImg5 },
         { title: "Youtube", link: "https://clone-90a52.web.app/", gitHub: "https://github.com/mohan7401647399/React-Youtube-Clone", imgUrl: projImg2 },
         { title: "Spotify", link: "https://spotify-clone-7276b.web.app/", gitHub: "https://github.com/mohan7401647399/Spotify-Clone", imgUrl: projImg3 },
         { title: "Instagram", link: "https://instagram-react-clone.netlify.app/", gitHub: "https://github.com/mohan7401647399/React_Instagram_Clone", imgUrl: projImg4 }

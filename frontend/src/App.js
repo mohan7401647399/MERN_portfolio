@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer";
 import Title from './components/Title';
 import { useEffect } from 'react';
 import About from './components/About';
+import BackToTop from './components/BackToTop';
 // import DarkLightTest from './components/DarkLightTest';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <BackToTop />
       {/* <DarkLightTest /> */}
     </div>
   );

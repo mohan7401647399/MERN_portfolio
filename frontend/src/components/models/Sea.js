@@ -16,9 +16,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     event.stopPropagation()
     event.preventDefault()
     setIsRotating(true)
-
     const clientX = event.touches ? event.touches.clientX : event.clientX
-
     lastX.current = clientX
   }
 

@@ -15,9 +15,9 @@ export function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
             variant='pills'
-            defaultActiveKey="/home"
+            defaultActiveKey="/homepage"
           >
-            <Nav.Link href="#home" className=' text-white'>Home</Nav.Link>
+            <Nav.Link href="#homepage" className=' text-white'>Home</Nav.Link>
             <Nav.Link href="#about" className=' text-white'>About</Nav.Link>
             <Nav.Link href="#skills" className=' text-white'>Skills</Nav.Link>
             <Nav.Link href="#project" className=' text-white'>Projects</Nav.Link>

@@ -5,7 +5,7 @@ export default function GithubCalender() {
     return (
         <div>
             <GitHubCalendar
-                username="mohan7401647399"
+                username="grubersjoe"
                 blockSize={15}
                 blockMargin={2}
                 color="#7030a0"

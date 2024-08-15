@@ -38,10 +38,6 @@ export const Projects = () => {
                         <Row> {JsGames.map((project, index) => { return (<JsGamesCard key={index} {...project} />) })}
                         </Row>
                       </Tab.Pane>
-                      {/* <Tab.Pane eventKey="third" className="h-50 w-50 m-auto">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvQpJaWdeDLLL_aWpfTZ5N5GcMKMUuhK9XA&usqp=CAU" alt="dice" />
-                        <p><a href="https://papaya-kulfi-ae2a2c.netlify.app/" className=" text-decoration-none">Dice game</a></p>
-                      </Tab.Pane> */}
                     </Tab.Content>
                   </Tab.Container>
                 </div>}

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --background-color:#000000;
   --foreground-color:#003cff;
@@ -28,4 +32,33 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.info-box{
+  @apply mx-5 relative flex text-white flex-col max-w-2xl neo-brutalism-blue pt-2 pb-4 px-8 items-center
+}
+
+.neo-brutalism-blue{
+  background: #2b77e7;
+  position: relative;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: #2b77e7;
+  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+  0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+}
+
+.neo-brutalism-white{
+  background: #fff;
+  border: #fff;
+   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+  0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+  text-decoration: none;
+}
+
+.neo-btn{
+  @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-auto w-[70%] -bottom-5
 }

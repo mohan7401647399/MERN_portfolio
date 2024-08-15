@@ -41,7 +41,7 @@ export const Contact = () => {
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea id="message" rows="6" name="message" required value={formDetails.message} placeholder="Message" onChange={onFormUpdate}></textarea>
-                        <button type="submit" onClick={formDetails.firstName === "" || formDetails.lastName === "" || formDetails.email === "" || formDetails.phone === "" || formDetails.message === "" ? "" : notify}>
+                        <button type="submit" onClick={formDetails.firstName === null || formDetails.lastName === null || formDetails.email === null || formDetails.phone === null || formDetails.message === null ? null : notify}>
                           <span>{buttonText}</span>
                           <ToastContainer position="bottom-left" />
                         </button>

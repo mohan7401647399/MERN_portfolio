@@ -5,14 +5,14 @@ import { a } from "@react-spring/three";
 import isIslandScene from "../../assets/3d/island.glb";
 
 function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
-  const isSea = useRef();
+  const isLandRef = useRef();
   const { gl, viewport } = useThree()
   const { nodes, materials } = useGLTF(isIslandScene);
   const lastX = useRef(0)
   const rotatingSpeed = useRef(0)
   const dampingFactor = 0.95
 
-  const handlePointerDown = (event) => {
+  const handleMouseDown = (event) => {
     event.stopPropagation()
     event.preventDefault()
     setIsRotating(true)
@@ -20,19 +20,19 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     lastX.current = clientX
   }
 
-  const handlePointerUp = (event) => {
+  const handleMouseUp = (event) => {
     event.stopPropagation()
     event.preventDefault()
     setIsRotating(false)
   }
 
-  const handlePointerMove = (event) => {
+  const handleMouseMove = (event) => {
     event.stopPropagation()
     event.preventDefault()
     if (isRotating) {
       const clientX = event.touches ? event.touches[0].clientX : event.clientX
       const delta = (clientX - lastX.current) / viewport.width
-      isSea.current.rotation.y += delta * 0.01 * Math.PI
+      isLandRef.current.rotation.y += delta * 0.01 * Math.PI
       lastX.current = clientX
       rotatingSpeed.current = delta * 0.01 * Math.PI
     }
@@ -41,11 +41,11 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true)
-      isSea.current.rotation.y += 0.005 * Math.PI
+      isLandRef.current.rotation.y += 0.005 * Math.PI
       rotatingSpeed.current = 0.007
     } else if (event.key === "ArrowRight") {
       if (!isRotating) setIsRotating(true)
-      isSea.current.rotation.y -= 0.005 * Math.PI
+      isLandRef.current.rotation.y -= 0.005 * Math.PI
       rotatingSpeed.current = -0.007
     }
   }
@@ -57,20 +57,20 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
   useEffect(() => {
     const canvas = gl.domElement
 
-    canvas.addEventListener("pointerdown", handlePointerDown)
-    canvas.addEventListener("pointerup", handlePointerUp)
-    canvas.addEventListener("pointermove", handlePointerMove)
+    canvas.addEventListener("pointerdown", handleMouseDown)
+    canvas.addEventListener("pointerup", handleMouseUp)
+    canvas.addEventListener("pointermove", handleMouseMove)
     canvas.addEventListener("keydown", handleKeyDown)
     canvas.addEventListener("keyup", handleKeyUp)
 
     return () => {
-      canvas.removeEventListener("pointerdown", handlePointerDown)
-      canvas.removeEventListener("pointerup", handlePointerUp)
-      canvas.removeEventListener("pointermove", handlePointerMove)
+      canvas.removeEventListener("pointerdown", handleMouseDown)
+      canvas.removeEventListener("pointerup", handleMouseUp)
+      canvas.removeEventListener("pointermove", handleMouseMove)
       canvas.removeEventListener("keydown", handleKeyDown)
       canvas.removeEventListener("keyup", handleKeyUp)
     }
-  }, [gl, handlePointerDown, handlePointerMove, handlePointerUp])
+  }, [gl, handleMouseDown, handleMouseMove, handleMouseUp])
   // eslint-disable-next-line
 
   useFrame(() => {
@@ -79,9 +79,9 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
       if (Math.abs(rotatingSpeed.current) < 0.001) {
         rotatingSpeed.current = 0
       }
-      isSea.current.rotation.y += rotatingSpeed.current
+      isLandRef.current.rotation.y += rotatingSpeed.current
     } else {
-      const rotation = isSea.current.rotation.y
+      const rotation = isLandRef.current.rotation.y
 
       const normalization = ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI)
 
@@ -106,7 +106,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
   })
 
   return (
-    <a.group {...props} ref={isSea}>
+    <a.group {...props} ref={isLandRef}>
       <mesh
         geometry={nodes.polySurface944_tree_body_0.geometry}
         material={materials.PaletteMaterial001}

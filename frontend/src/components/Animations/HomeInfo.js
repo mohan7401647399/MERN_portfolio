@@ -25,7 +25,7 @@ const HomeInfo = ({ currentStage }) => {
                 <p className='font-medium sm:text-xl text-center'>
                     Worked with many companies <br /> and picked up many skills along the way
                 </p>
-                <Link to="/skills" className='neo-brutalism-white neo-btn flex items-center gap-3'>
+                <Link to="/skills" className='neo-brutalism-white neo-btn flex items-center justify-center gap-3'>
                     Skills
                     <img src={arrow} alt="arrow" className='w-4 h-4 object-contain' />
                 </Link>
@@ -37,7 +37,7 @@ const HomeInfo = ({ currentStage }) => {
                 <p className='font-medium sm:text-xl text-center'>
                     Let's multiple projects to success over the year <br /> Curious about the impact?
                 </p>
-                <Link to="/projects" className='neo-brutalism-white neo-btn flex items-center gap-3'>
+                <Link to="/projects" className='neo-brutalism-white neo-btn flex items-center justify-center gap-3'>
                     Projects
                     <img src={arrow} alt="arrow" className='w-4 h-4 object-contain' />
                 </Link>
@@ -49,7 +49,7 @@ const HomeInfo = ({ currentStage }) => {
                 <p className='font-medium sm:text-xl text-center'>
                     Need a project done or looking for a dev? <br /> I'm Just a few keystrokes away
                 </p>
-                <Link to="/contact" className='neo-brutalism-white neo-btn flex items-center gap-3'>
+                <Link to="/contact" className='neo-brutalism-white neo-btn flex items-center justify-center gap-3'>
                     Contact
                     <img src={arrow} alt="arrow" className='w-4 h-4 object-contain' />
                 </Link>

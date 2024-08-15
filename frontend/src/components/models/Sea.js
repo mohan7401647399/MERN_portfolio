@@ -70,8 +70,9 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
       canvas.removeEventListener("keydown", handleKeyDown)
       canvas.removeEventListener("keyup", handleKeyUp)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gl, handleMouseDown, handleMouseMove, handleMouseUp])
-  // eslint-disable-next-line
+  // eslint-disable-next-line react-hooks/exhaustive-deps
 
   useFrame(() => {
     if (!isRotating) {

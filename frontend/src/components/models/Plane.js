@@ -14,8 +14,9 @@ const Plane = ({ isRotating, ...props }) => {
         } else {
             actions["Take 001"].stop()
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [actions, isRotating])
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 
     return (
         <mesh {...props} ref={ref}>

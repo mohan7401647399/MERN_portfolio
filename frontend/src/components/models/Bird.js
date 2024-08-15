@@ -10,8 +10,9 @@ const Bird = () => {
 
     useEffect(() => {
         actions["Take 001"].play()
-    }, [])
-    // eslint-disable-next-line
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [actions])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 
     useFrame(({ clock, camera }) => {
         birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2

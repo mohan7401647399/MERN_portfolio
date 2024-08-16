@@ -6,7 +6,7 @@ const HomeInfo = ({ currentStage }) => {
     if (currentStage === 1) {
         return (
             <div className='info-box'>
-                <p className='font-medium sm:text-xl text-center'>
+                <p className='font-mono text-center'>
                     Hi, I'm
                     <span className='font-semibold mx-2 text-white'>Mohan</span>
                     <br />
@@ -22,8 +22,8 @@ const HomeInfo = ({ currentStage }) => {
     } else if (currentStage === 2) {
         return (
             <div className='info-box'>
-                <p className='font-medium sm:text-xl text-center'>
-                    Worked with many companies <br /> and picked up many skills along the way
+                <p className='font-mono text-center'>
+                    With specialized skills, <br /> MERN specializes in web development
                 </p>
                 <Link to="/skills" className='neo-brutalism-white neo-btn flex items-center justify-center gap-3'>
                     Skills
@@ -34,8 +34,8 @@ const HomeInfo = ({ currentStage }) => {
     } else if (currentStage === 3) {
         return (
             <div className='info-box'>
-                <p className='font-medium sm:text-xl text-center'>
-                    Let's multiple projects to success over the year <br /> Curious about the impact?
+                <p className='font-mono text-center'>
+                    May many projects succeed in the year <br /> and work with many projects
                 </p>
                 <Link to="/projects" className='neo-brutalism-white neo-btn flex items-center justify-center gap-3'>
                     Projects
@@ -46,8 +46,8 @@ const HomeInfo = ({ currentStage }) => {
     } else if (currentStage === 4) {
         return (
             <div className='info-box'>
-                <p className='font-medium sm:text-xl text-center'>
-                    Need a project done or looking for a dev? <br /> I'm Just a few keystrokes away
+                <p className=' font-mono text-center'>
+                    Want to make a project or looking for a dev? <br /> I'm still in a few keystrokes
                 </p>
                 <Link to="/contact" className='neo-brutalism-white neo-btn flex items-center justify-center gap-3'>
                     Contact

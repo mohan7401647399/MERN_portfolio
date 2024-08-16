@@ -13,7 +13,7 @@ const HomeInfo = ({ currentStage }) => {
                     A Software Developer from India
                     <br />
                 </p>
-                <Link to="/home" className='neo-brutalism-white neo-btn flex items-center gap-3'>
+                <Link to="/home" className='neo-brutalism-white neo-btn flex items-center justify-center gap-3'>
                     HomePage
                     <img src={arrow} alt="arrow" className='w-4 h-4 object-contain' />
                 </Link>

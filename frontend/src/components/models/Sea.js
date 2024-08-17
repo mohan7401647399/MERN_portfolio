@@ -12,6 +12,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
   const rotatingSpeed = useRef(0)
   const dampingFactor = 0.95
 
+  // Handle pointer (mouse or touch) down event
   const handleMouseDown = (event) => {
     event.stopPropagation()
     event.preventDefault()
@@ -20,12 +21,14 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     lastX.current = clientX
   }
 
+  // Handle pointer (mouse or touch) up event
   const handleMouseUp = (event) => {
     event.stopPropagation()
     event.preventDefault()
     setIsRotating(false)
   }
 
+  // Handle pointer (mouse or touch) move event
   const handleMouseMove = (event) => {
     event.stopPropagation()
     event.preventDefault()
@@ -38,6 +41,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     }
   }
 
+  // Handle keydown events
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true)
@@ -50,6 +54,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     }
   }
 
+  // Handle keyup events
   const handleKeyUp = (event) => {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") setIsRotating(false)
   }

@@ -8,7 +8,7 @@ const HomeInfo = ({ currentStage }) => {
             <div className='info-box'>
                 <p className='font-mono text-center'>
                     Hi, I'm
-                    <span className='font-semibold mx-2 text-white'>Mohan</span>
+                    <span className='font-semibold mx-2 text-white'>Mohan 👋</span>
                     <br />
                     A Software Developer from India
                     <br />

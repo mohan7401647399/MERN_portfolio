@@ -11,7 +11,7 @@ import BackToTop from './BackToTop';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <NavBar />
             <Title />
             <Banner />
@@ -21,7 +21,7 @@ const Home = () => {
             <Contact />
             <Footer />
             <BackToTop />
-        </div>
+        </>
     )
 }
 

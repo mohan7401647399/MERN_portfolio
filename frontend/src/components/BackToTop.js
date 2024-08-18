@@ -20,13 +20,13 @@ const BackToTop = () => {
     }
 
     return (
-        <div>
+        <>
             {backtoTopButton && (
                 <button style={{ position: "fixed", color: "gold", bottom: "60px", right: "60px", height: "60px", width: "50px", fontSize: "60px" }} onClick={scrollUp}>
                     <FaCircleArrowUp />
                 </button>
             )}
-        </div>
+        </>
     )
 }
 

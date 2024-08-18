@@ -16,15 +16,33 @@ import MernImg3 from "../assets/img/task_app.png";
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import HTML from '../assets/img/HTML.png'
+import CSS from '../assets/img/CSS.png'
+import JS from '../assets/img/JS.png'
+import BOOTSTRAP from '../assets/img/BOOTSTRAP.png'
+import SQL from '../assets/img/SQL.png'
+import MONGODB from '../assets/img/MONGODB.png'
+import SASS from '../assets/img/SASS.png'
+import TAILWIND from '../assets/img/TAILWINDCSS.png'
+import REACT from '../assets/img/REACT.png'
+import REACT_NATIVE from '../assets/img/REACT NATIVE.png'
+import NEXT_JS from '../assets/img/NEXTJS.png'
+import PYTHON from '../assets/img/PYTHON.png'
+import NODEJS from '../assets/img/NODEJS.png'
+import EXPRESS_JS from '../assets/img/EXPRESSJS.png'
+import REDUX from '../assets/img/REDUX.png'
+import POSTMAN from '../assets/img/POSTMAN.png'
+import ANGULAR from '../assets/img/ANGULAR.png'
+import FIREBASE from '../assets/img/FIREBASE.png'
+import NETLIFY from '../assets/img/NETLIFY.png'
 
 export const userContext = createContext(null);
 
 //      data pass to all components
 export const useUserContext = () => {
-    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames } = useContext(userContext);
+    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists } = useContext(userContext);
 
-    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames };
+    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists };
 };
 
 
@@ -162,8 +180,35 @@ export default function UserContextProvider({ children }) {
         }, 2000)
     }
 
+
+    //  Skills lists
+
+    const skillsLists =
+        [
+            { src: HTML, now: 90, label: "HTML" },
+            { src: CSS, now: 90, label: "CSS" },
+            { src: JS, now: 90, label: "Javascript" },
+            { src: BOOTSTRAP, now: 90, label: "Bootstrap" },
+            { src: SQL, now: 90, label: "SQL" },
+            { src: MONGODB, now: 90, label: "MongoDB" },
+            { src: SASS, now: 90, label: "SASS" },
+            { src: TAILWIND, now: 90, label: "Tailwind" },
+            { src: REACT, now: 90, label: "React" },
+            { src: REACT_NATIVE, now: 85, label: "React-Native" },
+            { src: NEXT_JS, now: 90, label: "NextJs" },
+            { src: PYTHON, now: 60, label: "Python" },
+            { src: NODEJS, now: 90, label: "NodeJs" },
+            { src: EXPRESS_JS, now: 80, label: "ExpressJs" },
+            { src: REDUX, now: 90, label: "Redux" },
+            { src: POSTMAN, now: 90, label: "Postman" },
+            { src: ANGULAR, now: 60, label: "Angular" },
+            { src: NETLIFY, now: 80, label: "Netlify" }, ,
+            { src: FIREBASE, now: 90, label: "Firebase" },
+        ]
+
+
     return (
-        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames }}>
+        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists }}>
             {children}
         </userContext.Provider>
     );

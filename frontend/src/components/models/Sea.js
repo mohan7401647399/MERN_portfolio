@@ -12,7 +12,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
   const rotatingSpeed = useRef(0)
   const dampingFactor = 0.95
 
-  // Handle pointer (mouse or touch) down event
+  // Mouse or touch down event
   const handleMouseDown = (event) => {
     event.stopPropagation()
     event.preventDefault()
@@ -21,14 +21,14 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     lastX.current = clientX
   }
 
-  // Handle pointer (mouse or touch) up event
+  // Mouse or touch up event
   const handleMouseUp = (event) => {
     event.stopPropagation()
     event.preventDefault()
     setIsRotating(false)
   }
 
-  // Handle pointer (mouse or touch) move event
+  // Mouse or touch move event
   const handleMouseMove = (event) => {
     event.stopPropagation()
     event.preventDefault()
@@ -41,7 +41,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     }
   }
 
-  // Handle keydown events
+  // keydown events
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true)
@@ -54,9 +54,41 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     }
   }
 
-  // Handle keyup events
+  //  keyup events
   const handleKeyUp = (event) => {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") setIsRotating(false)
+  }
+
+  // Mobile devices
+  const MobileTouchStart = (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    setIsRotating(true)
+
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX
+
+    lastX.current = clientX
+  }
+
+  const MobileTouchEnd = (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    setIsRotating(false)
+  }
+
+  const MobileTouchMove = (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+
+    if (isRotating) {
+      const clientX = e.touches ? e.touches[0].clientX : clientX
+      const delta = (clientX - lastX.current) / viewport.width
+
+      isLandRef.current.rotation.y += delta * 0.01 * Math.PI
+      lastX.current = clientX
+
+      rotatingSpeed.current = delta * 0.01 * Math.PI
+    }
   }
 
   useEffect(() => {
@@ -65,15 +97,21 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     canvas.addEventListener("pointerdown", handleMouseDown)
     canvas.addEventListener("pointerup", handleMouseUp)
     canvas.addEventListener("pointermove", handleMouseMove)
-    canvas.addEventListener("keydown", handleKeyDown)
-    canvas.addEventListener("keyup", handleKeyUp)
+    window.addEventListener("keydown", handleKeyDown)
+    window.addEventListener("keyup", handleKeyUp)
+    canvas.addEventListener("touchstart", MobileTouchStart);
+    canvas.addEventListener("touchend", MobileTouchEnd);
+    canvas.addEventListener("touchmove", MobileTouchMove);
 
     return () => {
       canvas.removeEventListener("pointerdown", handleMouseDown)
       canvas.removeEventListener("pointerup", handleMouseUp)
       canvas.removeEventListener("pointermove", handleMouseMove)
-      canvas.removeEventListener("keydown", handleKeyDown)
-      canvas.removeEventListener("keyup", handleKeyUp)
+      window.removeEventListener("keydown", handleKeyDown)
+      window.removeEventListener("keyup", handleKeyUp)
+      canvas.removeEventListener("touchstart", MobileTouchStart);
+      canvas.removeEventListener("touchend", MobileTouchEnd);
+      canvas.removeEventListener("touchmove", MobileTouchMove);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gl, handleMouseDown, handleMouseMove, handleMouseUp])

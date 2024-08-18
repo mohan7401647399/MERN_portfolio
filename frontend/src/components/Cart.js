@@ -1,14 +1,21 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Image, ProgressBar } from 'react-bootstrap'
+import { useUserContext } from './contextAPI';
 
-export default function Cart({ children }) {
+export default function Cart({ src, now, label }) {
+
+    const { scrolled } = useUserContext();
+
     return (
-        <Card
-            className="skillCard m-auto p-1 d-flex justify-content-center h-100 w-100"
-            style={{
-                boxShadow: "10px 10px 10px grey"
-            }}>
-            {children}
-        </Card>
+        <>
+            <span className={scrolled ? "animateSkill" : "show-animateSkill"}>
+                <div className='p-2 border-solid border-2 border-indigo-600 rounded-br-lg'>
+                    <div className='w-20 h-20 m-1 skillCard mb-2' >
+                        <Image src={src} thumbnail className="object-contain border-0 w-100 h-100" />
+                    </div >
+                    <ProgressBar now={now} label={label} animated />
+                </div >
+            </span>
+        </>
     )
 }

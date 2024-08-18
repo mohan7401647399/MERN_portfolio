@@ -9,7 +9,7 @@ export default function Cart({ src, now, label }) {
     return (
         <>
             <span className={scrolled ? "animateSkill" : "show-animateSkill"}>
-                <div className='p-2 border-solid border-2 border-indigo-600 rounded-br-lg'>
+                <div className='p-2 border-solid border-2 border-teal-600 rounded-br-lg'>
                     <div className='w-20 h-20 m-1 skillCard mb-2' >
                         <Image src={src} thumbnail className="object-contain border-0 w-100 h-100" />
                     </div >

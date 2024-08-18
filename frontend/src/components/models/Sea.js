@@ -81,7 +81,7 @@ function Sea({ isRotating, setIsRotating, setCurrentStage, ...props }) {
     e.preventDefault()
 
     if (isRotating) {
-      const clientX = e.touches ? e.touches[0].clientX : clientX
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX
       const delta = (clientX - lastX.current) / viewport.width
 
       isLandRef.current.rotation.y += delta * 0.01 * Math.PI

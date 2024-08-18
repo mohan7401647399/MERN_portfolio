@@ -202,8 +202,8 @@ export default function UserContextProvider({ children }) {
             { src: REDUX, now: 90, label: "Redux" },
             { src: POSTMAN, now: 90, label: "Postman" },
             { src: ANGULAR, now: 60, label: "Angular" },
-            { src: NETLIFY, now: 80, label: "Netlify" }, ,
-            { src: FIREBASE, now: 90, label: "Firebase" },
+            { src: NETLIFY, now: 80, label: "Netlify" },
+            { src: FIREBASE, now: 90, label: "Firebase" }
         ]
 
 

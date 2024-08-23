@@ -10,10 +10,10 @@ export const Skills = () => {
 
     return (
         <>
-            <section className="sill p-2 m-2 d-flex" id="skills">
+            <section className="p-2 m-2 d-flex" id="skills">
                 <Row>
                     <Col xl={12} sm={12} md={12} lg={12} xxl={12} className={scrolled ? "animateSkill" : "show-animateSkill"}>
-                        <div className="skill-bx wow zoomIn">
+                        <div className="skill-bx wow zoomIn custom-scroll">
                             <h2 className='titleTech'>Technologies and Tools</h2>
                             <p>
                                 <li>Front-End Development: Proficient in HTML, CSS, and JavaScript, I create stunning and responsive user interfaces that leave a lasting impression.</li>

@@ -40,9 +40,9 @@ export const userContext = createContext(null);
 
 //      data pass to all components
 export const useUserContext = () => {
-    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists } = useContext(userContext);
+    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage } = useContext(userContext);
 
-    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists };
+    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage };
 };
 
 
@@ -206,9 +206,28 @@ export default function UserContextProvider({ children }) {
             { src: FIREBASE, now: 90, label: "Firebase" }
         ]
 
+    //  Scroll-indicator
+
+    const [scrollPercentage, setScrollPercentage] = useState(0)
+
+    function handleScrollPercentage() {
+        const howMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+        setScrollPercentage((howMuchScrolled / height) * 100)
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScrollPercentage)
+        return () => {
+            window.removeEventListener("scroll", () => { })
+        }
+    }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
 
     return (
-        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists }}>
+        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists, handleScrollPercentage, setScrollPercentage, scrollPercentage }}>
             {children}
         </userContext.Provider>
     );

@@ -23,7 +23,7 @@ export const Skills = () => {
                         </div>
                     </Col>
                     <Col>
-                        <div className='flex flex-wrap gap-5 justify-center'>
+                        <div className='flex flex-wrap gap-5 justify-center mt-1'>
                             {
                                 skillsLists.map((skill, index) => {
                                     return (

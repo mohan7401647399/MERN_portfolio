@@ -9,10 +9,18 @@ import { HashLink } from 'react-router-hash-link';
 import resume from '../assets/img/Resume.pdf'
 import { BsArrowDownSquareFill } from "react-icons/bs";
 import { useUserContext } from './contextAPI';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 export default function Title() {
 
     const { scrolled } = useUserContext();
+
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            Click to download
+        </Tooltip>
+    );
 
     return (
         <>
@@ -31,9 +39,15 @@ export default function Title() {
                                 </div>
                                 <div className='d-flex justify-content-center align-items-center mt-4'>
                                     <a className='text-decoration-none' href={resume} download="resume">
-                                        <Button className='d-flex m-2' variant="outline-light">
-                                            Resume<BsArrowDownSquareFill />
-                                        </Button>
+                                        <OverlayTrigger
+                                            placement="left"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip}
+                                        >
+                                            <Button className='d-flex m-2' variant="outline-light">
+                                                Resume<BsArrowDownSquareFill />
+                                            </Button>
+                                        </OverlayTrigger>
                                     </a>
                                     <HashLink to='#connect' className=' text-decoration-none'>
                                         <Button className='m-2' variant="outline-light">Contact</Button>

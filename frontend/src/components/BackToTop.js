@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { FaCircleArrowUp } from "react-icons/fa6";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 const BackToTop = () => {
 
     const [backtoTopButton, setBackToTopButton] = useState(false)
+
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            redirect to home
+        </Tooltip>
+    );
+
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -22,9 +31,15 @@ const BackToTop = () => {
     return (
         <>
             {backtoTopButton && (
-                <button style={{ position: "fixed", color: "gold", bottom: "60px", right: "60px", height: "60px", width: "50px", fontSize: "60px" }} onClick={scrollUp}>
-                    <FaCircleArrowUp />
-                </button>
+                <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 250, hide: 400 }}
+                    overlay={renderTooltip}
+                >
+                    <button style={{ position: "fixed", color: "gold", bottom: "60px", right: "60px", height: "60px", width: "50px", fontSize: "60px" }} onClick={scrollUp}>
+                        <FaCircleArrowUp />
+                    </button>
+                </OverlayTrigger>
             )}
         </>
     )

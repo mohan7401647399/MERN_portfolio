@@ -20,7 +20,7 @@ export function NavBar() {
               variant='pills'
               defaultActiveKey="/homepage"
             >
-              <Nav.Link href="#homepage" className=' text-white'>Home</Nav.Link>
+              <Nav.Link href="#home" className=' text-white'>Home</Nav.Link>
               <Nav.Link href="#skills" className=' text-white'>Skills</Nav.Link>
               <Nav.Link href="#project" className=' text-white'>Projects</Nav.Link>
               <Nav.Link href="#connect" className=' text-white'>Contact</Nav.Link>
@@ -38,7 +38,7 @@ export function NavBar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className='fixed top-20 z-0 w-100 text-center bg-green-800'>
+      <div className='fixed top-20 z-0 w-100'>
         <div className='w-100 h-2 bg-amber-200'>
           <div className='h-2 bg-violet-900 w-0' style={{ width: `${scrollPercentage}%` }}></div>
         </div>

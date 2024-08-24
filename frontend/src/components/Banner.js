@@ -14,7 +14,7 @@ export const Banner = () => {
 
   return (
     <>
-      <section className="banner" id="home">
+      <section className="banner">
         <Container>
           <Row className="align-items-center">
             <Col xs={12} sm={12} lg={6} md={6} xl={7} className={scrolled ? "animate1" : "show-animate1"}>

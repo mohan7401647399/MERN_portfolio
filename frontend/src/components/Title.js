@@ -44,13 +44,13 @@ export default function Title() {
                                             delay={{ show: 250, hide: 400 }}
                                             overlay={renderTooltip}
                                         >
-                                            <Button className='d-flex m-2' variant="outline-light">
+                                            <Button className='d-flex m-2' variant="outline-primary">
                                                 Resume<BsArrowDownSquareFill />
                                             </Button>
                                         </OverlayTrigger>
                                     </a>
                                     <HashLink to='#connect' className=' text-decoration-none'>
-                                        <Button className='m-2' variant="outline-light">Contact</Button>
+                                        <Button className='m-2' variant="outline-info">Contact</Button>
                                     </HashLink>
                                 </div>
                             </div>

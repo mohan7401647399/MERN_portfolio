@@ -8,12 +8,14 @@ const Bird = () => {
     const birdRef = useRef()
     const { actions } = useAnimations(animations, birdRef)
 
+    //  Play animation
     useEffect(() => {
         actions["Take 001"].play()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     // eslint-disable-next-line react-hooks/exhaustive-deps
 
+    //  Animation
     useFrame(({ clock, camera }) => {
         birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2
 

@@ -12,6 +12,7 @@ const Animations = () => {
     const [isRotating, setIsRotating] = useState(false)
     const [currentStage, setCurrentStage] = useState(1)
 
+    //  Adjust screen size
     const adjustSeaScreeSize = () => {
         let screenScale, screenPosition
         if (window.innerWidth < 768) {
@@ -24,6 +25,7 @@ const Animations = () => {
         return [screenScale, screenPosition]
     }
 
+    //  Adjust screen size
     const adjustPlaneScreenSize = () => {
         let screenScale, screenPosition
         if (window.innerWidth < 768) {

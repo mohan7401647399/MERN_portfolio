@@ -7,13 +7,14 @@ const BackToTop = () => {
 
     const [backtoTopButton, setBackToTopButton] = useState(false)
 
+    //  tooltip
     const renderTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>
             redirect to home
         </Tooltip>
     );
 
-
+    //  scroll
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 100 && window.scrollX < 100) setBackToTopButton(true)
@@ -21,6 +22,7 @@ const BackToTop = () => {
         })
     }, [])
 
+    //  scroll
     const scrollUp = () => {
         window.scrollTo({
             top: 0,

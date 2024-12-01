@@ -52,6 +52,7 @@ export default function UserContextProvider({ children }) {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
+    //  Scroll
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 0 || window.scrollY < 0) {
@@ -65,10 +66,10 @@ export default function UserContextProvider({ children }) {
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
+    //  Scroll
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
-
 
     // banner page functions
     const [loopNum, setLoopNum] = useState(0);
@@ -155,11 +156,13 @@ export default function UserContextProvider({ children }) {
 
     const notify = () => toast("Contact form successfully saved!");
 
+    //  Contact form
     const onFormUpdate = (e) => {
         const { name, value } = e.target;
         setFormDetails({ ...formDetails, [name]: value })
     }
 
+    //  Contact form
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtonText("Sending...");
@@ -180,9 +183,7 @@ export default function UserContextProvider({ children }) {
         }, 2000)
     }
 
-
     //  Skills lists
-
     const skillsLists =
         [
             { src: HTML, now: 90, label: "HTML" },
@@ -207,9 +208,9 @@ export default function UserContextProvider({ children }) {
         ]
 
     //  Scroll-indicator
-
     const [scrollPercentage, setScrollPercentage] = useState(0)
 
+    //  Scroll
     function handleScrollPercentage() {
         const howMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;

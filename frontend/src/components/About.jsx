@@ -2,7 +2,6 @@ import React from 'react'
 
 export default function About() {
     return (
-        <>
             <div className='text-center custom-scroll  font-mono' id='about'>
                 <div className='m-5 p-3'>
                     <h1 className=' font-sans'>About Me</h1>
@@ -11,6 +10,5 @@ export default function About() {
                     <p> Feel free to explore my portfolio to see some of the projects I've worked on. If you'd like to connect or collaborate, please don't hesitate to reach out!</p>
                 </div>
             </div>
-        </>
     )
 }

@@ -6,6 +6,7 @@ import { Contact } from "./components/Contact";
 import Animations from './components/Animations/Animations'
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
+import { ToastContainer } from 'react-toastify';
 // import DarkLightTest from './components/DarkLightTest';
 // import GithubCalender from './components/GithubCalender'
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
+      <ToastContainer position="bottom-left" />
       {/* <GithubCalender /> */}
       {/* <DarkLightTest /> */}
     </div>

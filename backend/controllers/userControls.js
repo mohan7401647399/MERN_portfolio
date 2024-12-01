@@ -64,6 +64,6 @@ userRouter.post("/contact", async (req, res) => {
       error: error,
     });
   }
-}).then((data) => console.log(data)).catch(err => console.log(err));
+});
 
 module.exports = userRouter;

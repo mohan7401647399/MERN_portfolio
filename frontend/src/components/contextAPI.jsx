@@ -40,9 +40,9 @@ export const userContext = createContext(null);
 
 //      data pass to all components
 export const useUserContext = () => {
-    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage } = useContext(userContext);
+    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate,  MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage } = useContext(userContext);
 
-    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage };
+    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate,  MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage };
 };
 
 
@@ -154,8 +154,6 @@ export default function UserContextProvider({ children }) {
     const [buttonText, setButtonText] = useState('Send');
     const [status, setStatus] = useState({});
 
-    const notify = () => toast("Contact form successfully saved!");
-
     //  Contact form
     const onFormUpdate = (e) => {
         const { name, value } = e.target;
@@ -177,6 +175,7 @@ export default function UserContextProvider({ children }) {
                 }
             }).catch(err => console.log(err))
         setButtonText("Sent");
+        toast.success("Contact form successfully saved!")
         setFormDetails(formInitialDetails);
         setTimeout(() => {
             setStatus({})
@@ -228,7 +227,7 @@ export default function UserContextProvider({ children }) {
 
 
     return (
-        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, notify, MERNprojects, JsGames, skillsLists, handleScrollPercentage, setScrollPercentage, scrollPercentage }}>
+        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate,  MERNprojects, JsGames, skillsLists, handleScrollPercentage, setScrollPercentage, scrollPercentage }}>
             {children}
         </userContext.Provider>
     );

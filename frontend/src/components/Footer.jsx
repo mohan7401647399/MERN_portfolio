@@ -7,37 +7,43 @@ import navIcon5 from "../assets/img/dev-to.svg";
 import { useUserContext } from './contextAPI';
 
 export const Footer = () => {
-
   const { scrolled } = useUserContext();
 
   return (
-    <>
-      <footer className="footer m-2">
-        <Container>
-          <Row className={scrolled ? "animate2" : "show-animate2"}>
-            <Col size={12} sm={6} md={4} lg={4} xs={12} xl={4} xxl={4} className="text-center text-sm-start mt-3">
-              <a href="/home" className="text-decoration-none text-info"><h1>R.Mohan</h1></a>
-              <span>Junior MERN stack developer</span>
-            </Col>
-            <Col size={12} sm={6} md={4} lg={4} xs={12} xl={4} xxl={4} className="text-center m-auto p-2">
-              <div className="social-icon d-inline">
-                <a href="https://github.com/mohan7401647399"><img src={navIcon2} alt="Github" /></a>
-                <a href="https://stackoverflow.com/users/23556968/mohan-r"><img src={navIcon4} alt="StackOverflow" /></a>
-                <a href="https://www.linkedin.com/in/mohan-r-86164b24b/"><img src={navIcon1} alt="linkedin" /></a>
-                <a href="https://dev.to/mohan7401647399"><img src={navIcon5} alt="dev-to" /></a>
-                <a href="https://www.instagram.com/messiah.freakin"><img src={navIcon3} alt="Instagram" /></a>
-              </div>
-            </Col>
-            <Col size={12} sm={12} md={4} lg={4} xs={12} xl={4} xxl={4} className="text-center m-auto">
-              <p>Phone/Whatsapp: 7401647399 / 8667764437</p>
-              <p>Official Mail id: mtm.kcs@gmail.com</p>
-            </Col>
-            <Col className="text-center text-secondary">
-              &copy; Copyright 2024 Mohan
-            </Col>
-          </Row>
-        </Container>
-      </footer>
-    </>
-  )
-}
+    <footer className="footer bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-8">
+      <Container>
+        <Row className={ `flex flex-col md:flex-row justify-between items-center ${scrolled ? "animate2" : "show-animate2"}` }>
+
+          {/* Left Section - Branding */ }
+          <Col md={ 4 } className="text-center md:text-left">
+            <a href="/home" className="text-decoration-none text-blue-400 hover:text-blue-600 transition duration-300">
+              <h1 className="text-3xl font-bold">R.Mohan</h1>
+            </a>
+            <span className="text-gray-400">Junior MERN Stack Developer</span>
+          </Col>
+
+          {/* Center Section - Social Icons */ }
+          <Col md={ 4 } className="flex justify-center space-x-4 mt-4 md:mt-0">
+            <a href="https://github.com/mohan7401647399" className="social-link"><img src={ navIcon2 } alt="Github" /></a>
+            <a href="https://stackoverflow.com/users/23556968/mohan-r" className="social-link"><img src={ navIcon4 } alt="StackOverflow" /></a>
+            <a href="https://www.linkedin.com/in/mohan-r-86164b24b/" className="social-link"><img src={ navIcon1 } alt="LinkedIn" /></a>
+            <a href="https://dev.to/mohan7401647399" className="social-link"><img src={ navIcon5 } alt="Dev.to" /></a>
+            <a href="https://www.instagram.com/messiah.freakin" className="social-link"><img src={ navIcon3 } alt="Instagram" /></a>
+          </Col>
+
+          {/* Right Section - Contact Info */ }
+          <Col md={ 4 } className="text-center md:text-right mt-4 md:mt-0">
+            <p className="text-gray-400">📞 <strong>Phone/WhatsApp:</strong> 7401647399 / 8667764437</p>
+            <p className="text-gray-400">📧 <strong>Email:</strong> <a href="mailto:mtm.kcs@gmail.com" className="text-blue-400 hover:underline">mtm.kcs@gmail.com</a></p>
+          </Col>
+
+        </Row>
+
+        {/* Bottom Section - Copyright */ }
+        <div className="text-center text-gray-500 text-sm mt-6">
+          &copy; { new Date().getFullYear() } Mohan. All Rights Reserved.
+        </div>
+      </Container>
+    </footer>
+  );
+};

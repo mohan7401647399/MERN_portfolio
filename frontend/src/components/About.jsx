@@ -1,14 +1,29 @@
-import React from 'react'
+import React from 'react';
 
 export default function About() {
     return (
-            <div className='text-center custom-scroll  font-mono' id='about'>
-                <div className='m-5 p-3'>
-                    <h1 className=' font-sans'>About Me</h1>
-                    <p>Hello! I'm Mohan, a passionate MERN stack developer with experience in building full-stack web applications using MongoDB, Express.js, React, and Node.js. I have a strong foundation in both frontend and backend development, allowing me to create dynamic and responsive web applications that meet user needs and business goals.</p>
-                    <p>I'm constantly seeking new challenges and opportunities to expand my knowledge and skills in web development. I enjoy learning about emerging technologies and trends to stay updated in the fast-paced world of tech.</p>
-                    <p> Feel free to explore my portfolio to see some of the projects I've worked on. If you'd like to connect or collaborate, please don't hesitate to reach out!</p>
-                </div>
+        <section id="about" className="flex justify-center items-center min-h-screen bg-gray-900 text-white px-5">
+            <div className="max-w-3xl p-8 rounded-lg shadow-lg border border-blue-500 bg-gray-800 text-center transform transition duration-500 hover:scale-105">
+                {/* Title */ }
+                <h1 className="text-4xl font-bold text-blue-400 mb-4">About Me</h1>
+
+                {/* Introduction */ }
+                <p className="text-lg text-gray-300 leading-relaxed">
+                    👋 Hello! I'm <span className="text-blue-300 font-semibold">Mohan</span>, a passionate **MERN Stack Developer** with expertise in **MongoDB, Express.js, React, and Node.js**.
+                    I specialize in crafting high-performance **full-stack web applications** that seamlessly integrate both frontend and backend technologies.
+                </p>
+
+                {/* Skills & Passion */ }
+                <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+                    🚀 I enjoy solving complex problems, optimizing user experiences, and staying ahead in the **ever-evolving world of web technologies**.
+                    I love learning new frameworks and contributing to **open-source projects**.
+                </p>
+
+                {/* Call to Action */ }
+                <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+                    🤝 Looking for collaboration? Feel free to <span className="text-blue-300 font-semibold">connect with me</span> for **exciting projects and new opportunities**!
+                </p>
             </div>
-    )
+        </section>
+    );
 }

@@ -2,7 +2,7 @@
 
 A feature-rich portfolio web application showcasing my skills, projects, and experience as a MERN stack developer. This project leverages modern tools and technologies to create an interactive and dynamic user experience.
 
-# Live URL - [https://merry-daffodil-f87227.netlify.app/](https://mohandev.netlify.app/)
+# Live URL - https://mohandev.netlify.app/
 
 ## Features
 - **Dynamic Portfolio:** Highlight skills, projects, and experience with a visually appealing design.

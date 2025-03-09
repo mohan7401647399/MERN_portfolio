@@ -36,6 +36,7 @@ export const Skills = () => {
 
         return () => {
             if (skillsRef.current) {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 observer.unobserve(skillsRef.current);
             }
         };

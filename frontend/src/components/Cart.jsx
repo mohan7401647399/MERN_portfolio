@@ -27,6 +27,7 @@ export default function Cart({ src, now, label, index }) {
 
         return () => {
             if (cartRef.current) {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 observer.unobserve(cartRef.current);
             }
         };

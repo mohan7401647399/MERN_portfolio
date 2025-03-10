@@ -8,6 +8,7 @@ import { Footer } from "./Footer";
 import Title from './Title';
 import About from './About';
 import BackToTop from './BackToTop';
+import GithubCalender from './GithubCalender';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Title />
             <Banner />
             <About />
+            <GithubCalender />
             <Skills />
             <Projects />
             <Contact />

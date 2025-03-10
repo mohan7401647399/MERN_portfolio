@@ -1,19 +1,19 @@
-import Form from 'react-bootstrap/Form';
+import Form from "react-bootstrap/Form";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import React, { useEffect, useState } from 'react';
-import { useUserContext } from './contextAPI';
+import React, { useEffect, useState } from "react";
+import { useUserContext } from "./contextAPI";
 
 export function NavBar() {
   const { scrollPercentage } = useUserContext();
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // List of section IDs
   const sections = ["home", "skills", "project", "connect", "about"];
 
   useEffect(() => {
     const handleScroll = () => {
-      let currentSection = '';
-
+      let currentSection = "";
       sections.forEach((id) => {
         const section = document.getElementById(id);
         if (section) {
@@ -23,21 +23,43 @@ export function NavBar() {
           }
         }
       });
-
       setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Updated Search Function
+  const handleSearch = (e) => {
+    e.preventDefault(); // Prevents form default behavior
+
+    if (!searchTerm.trim()) {
+      alert("Please enter a section name!");
+      return;
+    }
+
+    const searchQuery = searchTerm.toLowerCase();
+    const matchedSection = sections.find((section) => section.includes(searchQuery));
+
+    if (matchedSection) {
+      document.getElementById(matchedSection)?.scrollIntoView({
+        behavior: "smooth",
+      });
+      setSearchTerm(""); // Clear search input
+    } else {
+      alert("Section not found. Try searching: Home, Skills, Projects, Connect, About");
+    }
+  };
 
   return (
     <>
       <Navbar expand="md" className="bg-black fixed-top">
         <Container fluid>
           <Navbar.Brand href="/" className="text-primary">
-            <h4><b>&#123; Mohan &#125; </b></h4>
+            <h4>
+              <b>&#123; Mohan &#125;</b>
+            </h4>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -53,9 +75,19 @@ export function NavBar() {
                 </Nav.Link>
               )) }
             </Nav>
-            <Form className="d-flex">
-              <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
-              <Button variant="outline-success">Search</Button>
+            {/* Updated Search Form */ }
+            <Form className="d-flex" onSubmit={ handleSearch }>
+              <Form.Control
+                type="search"
+                placeholder="Search section..."
+                className="me-2"
+                value={ searchTerm }
+                onChange={ (e) => setSearchTerm(e.target.value) }
+                aria-label="Search"
+              />
+              <Button variant="outline-success" type="submit">
+                Search
+              </Button>
             </Form>
           </Navbar.Collapse>
         </Container>
@@ -69,4 +101,4 @@ export function NavBar() {
       </div>
     </>
   );
-};
+}

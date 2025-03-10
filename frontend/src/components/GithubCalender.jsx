@@ -1,70 +1,28 @@
-import React from 'react'
-import GitHubCalendar from 'react-github-calendar';
+import React from "react";
+import GitHubCalendar from "react-github-calendar";
 
 export default function GithubCalender() {
     return (
-        <div>
-            <GitHubCalendar
-                username="grubersjoe"
-                blockSize={15}
-                blockMargin={2}
-                color="#7030a0"
-                fontSize={16} />
-        </div>
-    )
+        <section className="github-section">
+            <h2 className="github-title">📊 GitHub Contribution Calendar</h2>
+            <p className="github-description">
+                Check out my GitHub activity and contributions over the past year!
+            </p>
+            <div className="github-calendar-container">
+                <GitHubCalendar
+                    username="mohan7401647399"
+                    blockSize={ 12 }
+                    blockMargin={ 4 }
+                    theme={ {
+                        level0: "#ebedf0",
+                        level1: "#9be9a8",
+                        level2: "#40c463",
+                        level3: "#30a14e",
+                        level4: "#216e39",
+                    } }
+                    fontSize={ 14 }
+                />
+            </div>
+        </section>
+    );
 }
-
-
-
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-
-// const GithubCalender = () => {
-//     const [contributions, setContributions] = useState(null);
-
-//     useEffect(() => {
-//         const fetchContributions = async () => {
-//             try {
-//                 const response = await axios.get('https://api.github.com/users/mohan7401647399/events');
-//                 setContributions(response.data);
-//             } catch (error) {
-//                 console.error('Error fetching GitHub data', error);
-//             }
-//         };
-
-//         fetchContributions();
-//     }, []);
-
-//     return (
-//         <div>
-//             {contributions ? (
-//                 <pre>{JSON.stringify(contributions, null, 2)}</pre>
-//             ) : (
-//                 <p>Loading contributions...</p>
-//             )}
-//         </div>
-//     );
-// };
-
-// export default GithubCalender;
-
-
-
-// import React, { useEffect, useRef } from 'react';
-// import GitHubCalendar from 'github-calendar';
-
-// const GithubCalender = () => {
-//     const calendarRef = useRef(null);
-
-//     useEffect(() => {
-//         if (calendarRef.current) {
-//             GitHubCalendar(calendarRef.current, 'mohan7401647399', {
-//                 responsive: true,
-//             });
-//         }
-//     }, []);
-
-//     return <div ref={calendarRef}></div>;
-// };
-
-// export default GithubCalender;

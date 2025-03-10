@@ -7,7 +7,7 @@ import { useEffect, useState, useRef } from "react";
 
 export const Skills = () => {
     const { skillsLists } = useUserContext();
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
     const skillsRef = useRef(null);
 
     useEffect(() => {

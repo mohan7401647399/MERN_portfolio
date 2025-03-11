@@ -23,6 +23,7 @@ export default function GithubCalender() {
                     fontSize={ 14 }
                 />
             </div>
+            <div className="github-link"> <a href="https://github.com/mohan7401647399" target="_blank" rel="noreferrer" style={ { textDecoration: "none" } }>Github Repository</a> </div>
         </section>
     );
 }

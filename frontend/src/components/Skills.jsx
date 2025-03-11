@@ -60,8 +60,8 @@ export const Skills = () => {
             <Row className="w-full mt-8">
                 <Col xl={ 12 } sm={ 12 } md={ 12 } lg={ 12 } xxl={ 12 } className="text-center">
                     <ul className="text-lg text-gray-300 space-y-2 leading-relaxed">
-                        <li>⚡ <strong>Front-End:</strong> HTML, CSS, JavaScript, React.js, Tailwind CSS</li>
-                        <li>⚙️ <strong>Back-End:</strong> Node.js, Express.js, Python</li>
+                        <li>⚡ <strong>Front-End:</strong> HTML, CSS, JavaScript, React.js, Tailwind CSS, Bootstrap</li>
+                        <li>⚙️ <strong>Back-End:</strong> Node.js, Express.js, Python (Beginner), Java(Beginner)</li>
                         <li>🗄️ <strong>Databases:</strong> MongoDB, MySQL, Firebase</li>
                     </ul>
                 </Col>

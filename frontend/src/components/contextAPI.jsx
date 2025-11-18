@@ -77,7 +77,7 @@ export default function UserContextProvider({ children }) {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = ["FullStack Developer", "UI/UX Designer", "Front-end developer", "Backend developer", "Mobile App developer"];
+    const toRotate = ["Java FullStack Developer", "MERN stack developer", "Front-end developer", "Backend developer", "UI/UX Designer"];
     const period = 2000;
 
     const tick = () => {

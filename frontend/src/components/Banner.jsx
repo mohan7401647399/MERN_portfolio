@@ -28,7 +28,7 @@ export const Banner = () => {
                     <p>
                       👋 Hello! I'm <span className="text-warning">Mohan R</span>, a passionate and detail-oriented Web Application Developer with a track record of creating powerful, secure, and user-friendly web solutions. I take pride in crafting robust applications that elevate businesses and empower users.
                     </p>
-                    <b className=" text-success">I will not rest untill i reach my goal</b>
+                    <b className=" text-success">I won't give up until I reach my goal</b>
                     <button onClick={() => console.log('connect')}>Let&#39;s Connect <ArrowRightCircle size={25} /></button>
                   </div>}
               </TrackVisibility>

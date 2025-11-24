@@ -31,7 +31,7 @@ export default function Title() {
                                 Hi, I'm Mohan
                             </h1>
                             <p className="text-lg text-gray-300 mt-3">
-                                A **MERN Stack Developer** passionate about crafting **scalable** and **high-performance** web applications.
+                                A Java Fullstack & MERN Stack Developer passionate about crafting scalable and high-performance web applications.
                             </p>
 
                             {/* Social Media Icons */ }

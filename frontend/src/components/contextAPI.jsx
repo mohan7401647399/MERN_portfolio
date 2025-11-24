@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import springboot from "../assets/img/spring_boot.png";
+import Java from "../assets/img/Java.png";
 import projImg1 from "../assets/img/ecommerce.png";
 import projImg2 from "../assets/img/youtube.png";
 import projImg3 from "../assets/img/spotify.png";
@@ -27,12 +29,10 @@ import TAILWIND from '../assets/img/TAILWINDCSS.png'
 import REACT from '../assets/img/REACT.png'
 import REACT_NATIVE from '../assets/img/REACT NATIVE.png'
 import NEXT_JS from '../assets/img/NEXTJS.png'
-import PYTHON from '../assets/img/PYTHON.png'
 import NODEJS from '../assets/img/NODEJS.png'
-import EXPRESS_JS from '../assets/img/EXPRESSJS.png'
+import EXPRESS_JS from '../assets/img/express.png'
 import REDUX from '../assets/img/REDUX.png'
 import POSTMAN from '../assets/img/POSTMAN.png'
-import ANGULAR from '../assets/img/ANGULAR.png'
 import FIREBASE from '../assets/img/FIREBASE.png'
 import NETLIFY from '../assets/img/NETLIFY.png'
 
@@ -40,9 +40,9 @@ export const userContext = createContext(null);
 
 //      data pass to all components
 export const useUserContext = () => {
-    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate,  MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage } = useContext(userContext);
+    const { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage } = useContext(userContext);
 
-    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate,  MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage };
+    return { activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, MERNprojects, JsGames, skillsLists, scrollPercentage, setScrollPercentage };
 };
 
 
@@ -185,10 +185,12 @@ export default function UserContextProvider({ children }) {
     //  Skills lists
     const skillsLists =
         [
+            { src: Java, now: 95, label: "Java" },
+            { src: JS, now: 95, label: "Javascript" },
             { src: HTML, now: 90, label: "HTML" },
             { src: CSS, now: 90, label: "CSS" },
-            { src: JS, now: 90, label: "Javascript" },
             { src: BOOTSTRAP, now: 90, label: "Bootstrap" },
+            { src: springboot, now: 95, label: "springboot" },
             { src: SQL, now: 90, label: "SQL" },
             { src: MONGODB, now: 90, label: "MongoDB" },
             { src: SASS, now: 90, label: "SASS" },
@@ -196,12 +198,10 @@ export default function UserContextProvider({ children }) {
             { src: REACT, now: 90, label: "React" },
             { src: REACT_NATIVE, now: 85, label: "React-Native" },
             { src: NEXT_JS, now: 90, label: "NextJs" },
-            { src: PYTHON, now: 60, label: "Python" },
             { src: NODEJS, now: 90, label: "NodeJs" },
             { src: EXPRESS_JS, now: 80, label: "ExpressJs" },
             { src: REDUX, now: 90, label: "Redux" },
             { src: POSTMAN, now: 90, label: "Postman" },
-            { src: ANGULAR, now: 60, label: "Angular" },
             { src: NETLIFY, now: 80, label: "Netlify" },
             { src: FIREBASE, now: 90, label: "Firebase" }
         ]
@@ -227,7 +227,7 @@ export default function UserContextProvider({ children }) {
 
 
     return (
-        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate,  MERNprojects, JsGames, skillsLists, handleScrollPercentage, setScrollPercentage, scrollPercentage }}>
+        <userContext.Provider value={{ activeLink, setActiveLink, scrolled, setScrolled, onUpdateActiveLink, loopNum, setLoopNum, isDeleting, setIsDeleting, text, setText, delta, setDelta, index, setIndex, toRotate, period, responsive, projects, handleSubmit, formDetails, buttonText, status, onFormUpdate, MERNprojects, JsGames, skillsLists, handleScrollPercentage, setScrollPercentage, scrollPercentage }}>
             {children}
         </userContext.Provider>
     );

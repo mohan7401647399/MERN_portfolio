@@ -9,7 +9,7 @@ export default function About() {
 
                 {/* Introduction */ }
                 <p className="text-lg text-gray-300 leading-relaxed">
-                    👋 Hello! I'm <span className="text-blue-300 font-semibold">Mohan</span>, a passionate <span className="text-blue-300 font-semibold">Java & MERN Stack Developer</span> with expertise in <span className="text-blue-300 font-semibold">" Springboot, MongoDB, Express.js, React, and Node.js "</span>.
+                    👋 Hello! I'm <span className="text-blue-300 font-semibold">Mohan</span>, a passionate <span className="text-blue-300 font-semibold">Java Fullstack | MERN Stack Developer</span> with expertise in <span className="text-blue-300 font-semibold">" Springboot, MongoDB, Express.js, React, and Node.js "</span>.
                     I specialize in crafting high-performance full-stack web applications that seamlessly integrate both frontend and backend technologies.
                 </p>
 

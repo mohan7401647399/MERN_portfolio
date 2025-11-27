@@ -19,7 +19,7 @@ export const Footer = () => {
             <a href="/home" className="text-decoration-none text-blue-400 hover:text-blue-600 transition duration-300">
               <h1 className="text-3xl font-bold">R.Mohan</h1>
             </a>
-            <span className="text-gray-400">Junior MERN Stack Developer</span>
+            <span className="text-gray-400">Java fullstack / MERN Stack Developer</span>
           </Col>
 
           {/* Center Section - Social Icons */ }
